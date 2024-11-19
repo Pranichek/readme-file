@@ -20,7 +20,9 @@ print()
 ```
 
 ```python
-    print()
+    print(dfkmfd)
+    def ():
+        print()
 ```
 
 <a href="https://fonts.google.com/selection"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/mfts0"></a>
