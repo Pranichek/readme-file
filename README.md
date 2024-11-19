@@ -19,7 +19,7 @@ First, clone this repository:
 ```
 
 ```python
-    <?php phpinfo();?>
+    print()
 ```
 
 <a href="https://fonts.google.com/selection"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/mfts0"></a>
