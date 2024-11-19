@@ -58,4 +58,6 @@ open https://github.com/Pranichek/Music_player
 
 ***This is readme file about my project music player.***
 
+~~*__Тут странный текст__*~~
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAOQOXpz3-LzbrnJJkZnn5jejcz7HPJyAkw&s" alt="alternative_text">
