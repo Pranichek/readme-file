@@ -25,6 +25,7 @@ hahahahahahah
 
 <a href="https://fonts.google.com/selection"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/mfts0"></a>
 
+<a >
 
 <!-- start:code block -->
 # Clone this repository
@@ -61,3 +62,5 @@ open https://github.com/Pranichek/Music_player
 ~~*__This is readme file about my project music player.__*~~
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAOQOXpz3-LzbrnJJkZnn5jejcz7HPJyAkw&s" alt="alternative_text">
+
+Привет это [Обычная ссылка в строке](https://www.google.com)
