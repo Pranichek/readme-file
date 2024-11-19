@@ -13,9 +13,10 @@
 
 First, clone this repository:
 
-```
-    Здесь может быть
-    Ваша реклама
+``'
+print(dfkmfd)
+def ():
+print()
 ```
 
 ```python
