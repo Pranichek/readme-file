@@ -49,7 +49,7 @@ open https://github.com/Pranichek/Music_player
 <!-- end:code block -->
 
 
-##Getting started
+## Getting started
 *This is readme file about my project music player.*
 **This is readme file about my project music player.**
 'This is readme file about my project music player.'
