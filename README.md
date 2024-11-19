@@ -69,6 +69,12 @@ open https://github.com/Pranichek/Music_player
 - Второй 1. Пункт 2.
 - Третий 1. Пункт 3.
 
+
+
+- [X] Write music player
+- [ ] nothing
+- [X] add thread
+
 - Уровень списка 1. Пункт 1.
     - Уровень списка 2. Пункт 1.
 - Уровень списка 1. Пункт 2.
