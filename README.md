@@ -51,6 +51,12 @@ open https://github.com/Pranichek/Music_player
 
 ## Getting started
 *This is readme file about my project music player.*
+
+
 **This is readme file about my project music player.**
+
+
 'This is readme file about my project music player.'
+
+
 ***This is readme file about my project music player.***
