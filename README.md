@@ -63,4 +63,8 @@ open https://github.com/Pranichek/Music_player
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcAOQOXpz3-LzbrnJJkZnn5jejcz7HPJyAkw&s" alt="alternative_text">
 
-Привет это [Обычная ссылка в строке](https://www.google.com)
+Привет это [обычная ссылка в строке](https://www.google.com)
+
+- Первый 1. Пункт 1.
+- Второй 1. Пункт 2.
+- Третий 1. Пункт 3.
