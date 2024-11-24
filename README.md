@@ -71,6 +71,48 @@ If you still don't get how to install python, you can watch [here](https://www.y
     ```python
     git clone <repository_url>
     ```
+3. Prepare the project for use
+    - Go to the main project folder
+        ``` python  
+        cd music_player
+        ```
+4. Сreate a virtual environment
+    For macOS/Linux:
+        ``` python
+        python3 -m venv venv
+        ```
+    For Windows:
+        ``` python
+        python -m venv venv
+        ```
+4. Activate the Virtual Environment
+    On macOS/Linux:
+        ``` python
+        source venv\Scripts\activate   
+        ```
+    On Windows:
+        ``` python
+        venv\Scripts\activate
+        ```
+5. Install Project modules
+    - Once the virtual environment is active, install the required libraries by running:
+        ``` python
+        pip install -r requirements.txt
+        ```
+6. Launch program
+    - For start the Music Player, use the following command:
+        ``` python
+        python main.py
+        ```
+
+
+
+
+
+    
+
+
+        
 
 
 ```
