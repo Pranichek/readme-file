@@ -85,6 +85,7 @@ If you still don't get how to install python, you can watch [here](https://www.y
 
         python -m venv venv
 4. Activate the Virtual Environment
+
     On macOS/Linux:
 
         source venv\Scripts\activate
