@@ -34,9 +34,28 @@ This is an example of how you may give instructions on setting up your project l
 
 ## Installing python
 This is an example of how to install python if you never use him
-- First step
-    - Go to the official [Python website](https://www.python.org/downloads)
+- Download the Python Installer
+    - Go to the official [Python website](https://www.python.org)
     - Navigate to the Downloads section. The website automatically detects your operating system and displays the appropriate version.
+- Choose the Right Version
+    - For most users, the latest stable version is recommended. But if you don't have the latest version, try downloading another one.
+- Download the Installer
+    - Click on the Download Python button. This button will be in the top right corner of your screen.
+- Customize Installation Options 
+    - Check the box "Add Python to PATH" at the bottom of the installer window. This step is crucial for running Python from the command line
+    - Click Customize installation if you want to select additional options, but the default settings work fine for most users.
+- Install python
+    - Finnaly you can click the Install Now button and wait for the installation to complete.
+- Verify the Installation
+    - After installation, open your terminal or command prompt.
+        <details>
+        <summary> Operating system</summary>
+        - On Windows: Press Win + R, type cmd, and press Enter.
+        - On macOS/Linux: Open the Terminal application.
+        </details>
+    - Type ```python --version``` or ```python3 --version``` and press Enter.
+    - If Python is installed correctly, you will see the installed version displayed
+
 
 First, clone this repository:
 
