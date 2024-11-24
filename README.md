@@ -93,7 +93,7 @@ If you still don't get how to install python, you can watch [here](https://www.y
 5. Install Project modules
     - Once the virtual environment is active, install the required libraries by running:
 
-        pip install -r requirements.txt 
+        ```pip install -r requirements.txt```
 6. Launch program
     - For start the Music Player, use the following command:
         ``` python
