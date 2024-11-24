@@ -30,7 +30,7 @@ The result is a music player that can serve as a foundation for further enhancem
 </details>
 
 # Getting Started
-This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+Below will be instructions on how you can download this project to your device.
 
 ## Installing python
 This is an example of how to install python if you never use him
@@ -56,8 +56,22 @@ This is an example of how to install python if you never use him
     - Type ```python --version``` or ```python3 --version``` and press Enter.
     - If Python is installed correctly, you will see the installed version displayed
 
+If you still don't get how to install python, you can watch [here](https://www.youtube.com/watch?v=YKSpANU8jPE)
 
-First, clone this repository:
+
+## Installing this project
+1. Clone the project
+    - Went to the main page of project on github.
+    - Click the green "Code" button located at the top right.
+    - Select the HTTPS option and copy the project URL.
+2. Open project in an IDE
+    - Launch your preferred IDE(Vscode , PyCharm or another one)
+    - Open it , and select "Open Folder" option to navigate to and open the directory where the project was cloned.
+    - Press Control + J or just create new terminal , and write this:
+    ```python
+    git clone <repository_url>
+    ```
+
 
 ```
 hahahahahahah
