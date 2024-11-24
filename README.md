@@ -82,18 +82,18 @@ If you still don't get how to install python, you can watch [here](https://www.y
         python3 -m venv venv
     For Windows:
 
-        ```python -m venv venv```
+        python -m venv venv
 4. Activate the Virtual Environment
     On macOS/Linux:
 
-        ```source venv\Scripts\activate```
+        source venv\Scripts\activate
     On Windows:
 
-        ```venv\Scripts\activate```
+        venv\Scripts\activate
 5. Install Project modules
     - Once the virtual environment is active, install the required libraries by running:
 
-        ``` pip install -r requirements.txt```
+        pip install -r requirements.txt 
 6. Launch program
     - For start the Music Player, use the following command:
         ``` python
