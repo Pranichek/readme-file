@@ -36,6 +36,7 @@ This is an example of how you may give instructions on setting up your project l
 This is an example of how to install python if you never use him
 - First step
     - Go to the official [Python website](https://www.python.org/downloads)
+    - Navigate to the Downloads section. The website automatically detects your operating system and displays the appropriate version.
 
 First, clone this repository:
 
