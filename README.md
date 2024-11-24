@@ -78,24 +78,29 @@ If you still don't get how to install python, you can watch [here](https://www.y
         ```
 4. Сreate a virtual environment
     For macOS/Linux:
+    
         ``` python
         python3 -m venv venv
         ```
     For Windows:
+
         ``` python
         python -m venv venv
         ```
 4. Activate the Virtual Environment
     On macOS/Linux:
+
         ``` python
         source venv\Scripts\activate   
         ```
     On Windows:
+
         ``` python
         venv\Scripts\activate
         ```
 5. Install Project modules
     - Once the virtual environment is active, install the required libraries by running:
+
         ``` python
         pip install -r requirements.txt
         ```
