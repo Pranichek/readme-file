@@ -22,6 +22,11 @@
 
 <details>
 <summary>English version</summary>
+The main goal of developing this program was to improve skills in working with the customtkinter library and gain experience in creating functional applications with an attractive graphical user interface. 
+Naturally, this program was developed to provide a convenient way to play music on your computer.
+
+Additionally, the development of this project helped to better understand how to work with events, customize interface elements, and leverage various libraries to create a unified functional application. 
+The result is a music player that can serve as a foundation for further enhancement and adding new features, such as fetching relevant information from external music services.
 </details>
 
 
