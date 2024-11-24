@@ -29,6 +29,13 @@ Additionally, the development of this project helped to better understand how to
 The result is a music player that can serve as a foundation for further enhancement and adding new features, such as fetching relevant information from external music services.
 </details>
 
+# Getting Started
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
+
+## Installing python
+This is an example of how to install python if you never use him
+- First step
+    - Go to the official [Python website](https://www.python.org/downloads)
 
 First, clone this repository:
 
