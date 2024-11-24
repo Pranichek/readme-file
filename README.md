@@ -77,6 +77,7 @@ If you still don't get how to install python, you can watch [here](https://www.y
         cd music_player
         ```
 4. Сreate a virtual environment
+
     For macOS/Linux:
 
         python3 -m venv venv
