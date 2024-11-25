@@ -8,7 +8,8 @@
 8)какие были проблемы при создании проекта , как решил проблему с которой столкнулся
 9)сделать работу над ошибками(потоки , не создавал классы)
 10)висновок на укр и на англ(с чем помог проект, как он меня прокачал , чем он был мне полезен)
-### Table of contents
+<a name="articles"><h3>Table of contents</h3></a>
+
 [Project description](#headers)  
 
 [Getting started](#getting_started) 
@@ -45,6 +46,8 @@ improvements and the addition of new features, such as retrieving relevant infor
 таких як брати потрібну інформацію із зовнішніх музичних сервісів.
 </details>
 
+[⬆️Table of contents](#articles) 
+
 <a name="getting_started"><h1>Getting started</h1></a>
 Below will be instructions on how you can download this project to your device.
 
@@ -74,6 +77,7 @@ This is an example of how to install python if you never use him
 
 If you still don't get how to install python, you can watch [here](https://www.youtube.com/watch?v=YKSpANU8jPE)
 
+[⬆️Table of contents](#articles)
 
 ## Installing this project
 1. Clone the project
@@ -119,10 +123,9 @@ If you still don't get how to install python, you can watch [here](https://www.y
         ``` python
         python main.py
         ```
-
+[⬆️Table of contents](#articles)
 
 <a name="modules"><h1>MODULES FOR PROGRAM</h1></a>
-
 
 ### MODULES FOR DOWNLOADING
 
@@ -138,6 +141,9 @@ If you still don't get how to install python, you can watch [here](https://www.y
 * **json** - Used for reading JSON files and images for project/Використовувався для отримання необхідної інформації з JSON файлів, а також для зчитування шляхів до зображень.
 
 <a name="scheme"><h1>Scheme of the project</h1></a>
+
+[⬆️Table of contents](#articles)
+
 ```mermaid
 graph TD;
     music_player-->modules;
@@ -163,6 +169,8 @@ graph TD;
     music_player-->requirements.txt;
     music_player-->.gitignore;
 ```
+[⬆️Table of contents](#articles)
+
 <a name="package_description"><h1>Package description</h1></a>
 After looking at the main scheme of the project, you can now understand why each package and the modules in them are needed.
 
