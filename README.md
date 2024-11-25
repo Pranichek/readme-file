@@ -124,7 +124,7 @@ If you still don't get how to install python, you can watch [here](https://www.y
 graph TD;
     music_player-->modules;
     modules-->frames;
-    modules-->images;
+    modules-->load_images;
     modules-->json_functions;
     music_player-->static;
     static-->images;
