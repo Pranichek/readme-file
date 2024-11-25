@@ -8,28 +8,40 @@
 8)какие были проблемы при создании проекта , как решил проблему с которой столкнулся
 9)сделать работу над ошибками(потоки , не создавал классы)
 10)висновок на укр и на англ(с чем помог проект, как он меня прокачал , чем он был мне полезен)
+### Table of contents
+[Project description](#headers)  
+[Getting started](#getting_started) 
+[Modules description](#modules)
+[Scheme of project](#scheme)
+[Package description](#package_description)
+
 
 # Music PLayer
-## About project
-The main goal of developing this program was to improve skills in working with the customtkinter library and gain experience in creating functional applications with an attractive graphical user interface. 
-Naturally, this program was developed to provide a convenient way to play music on your computer.
+<a name="headers"><h2>About project</h2></a>
 
-Additionally, the development of this project helped to better understand how to work with events, customize interface elements, and leverage various libraries to create a unified functional application. 
-The result is a music player that can serve as a foundation for further enhancement and adding new features, such as fetching relevant information from external music services.
+The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
+experience in creating functional applications with an attractive graphical interface in Python.
+Of course, this program is not perfect, but this project served as a learning tool to deepen my understanding 
+of working with custom interface elements, troubleshooting code issues, and properly organizing files within a project.
+
+Moreover, the development of this project helped me better understand how to work with events and use various libraries 
+to create a unified functional application. The result is a music player that can be used as a foundation for further 
+improvements and the addition of new features, such as retrieving relevant information from external music services.
 
 <details>
 <summary>Ukraine version</summary>
 Головною метою розробки цієї програми було вдосконалення своїх навичок роботи з бібліотекою customtkinter, 
-а також отримання досвіду у створенні функціональних додатків із привабливим графічним інтерфейсом.
-Звісно ця програма розроблена для забезпечення зручного  способу відтворення музики на вашому комп'ютері.
+та отримання досвіду у створенні функціональних додатків із привабливим графічним інтерфейсом у Python.
+Звісно не можна сказати що ця програма ідеальна, але цей проєкт слугував меня як навчальний інструмент для поглиблення 
+розуміння роботи з кастомними елементами інтерфейсу, вирішування помилок у коді, та правильною розтановкою файлів.
 
-Окрім того,розробка цього проєкту допомгла краще зрозуміти, як працювати з подіями, налаштовувати кастомні елементи інтерфейсу, 
-а також як можна використовувати різні бібліотеки для створення єдиного функціонального додатку. Результатом став музичний плеєр, 
+Окрім того,розробка цього проєкту допомогла краще зрозуміти, як працювати з подіями, 
+також використовування різних бібліотек для створення єдиного функціонального додатку. Результатом став музичний плеєр, 
 який можна використовувати як базу для подальшого вдосконалення та додавання нових функцій, 
 таких як брати потрібну інформацію із зовнішніх музичних сервісів.
 </details>
 
-# Getting Started
+<a name="getting_started"><h1>Getting started</h1></a>
 Below will be instructions on how you can download this project to your device.
 
 ## Installing python
@@ -104,7 +116,9 @@ If you still don't get how to install python, you can watch [here](https://www.y
         python main.py
         ```
 
-# MODULES FOR PROGRAM
+
+<a name="modules"><h1>MODULES FOR PROGRAM</h1></a>
+
 
 ### MODULES FOR DOWNLOADING
 
@@ -119,7 +133,7 @@ If you still don't get how to install python, you can watch [here](https://www.y
 * random - Used for the function of playing random music/Використовувся для функції програвання рандомної музики
 * json - Used for reading JSON files and images for project/Використовувався для отримання необхідної інформації з JSON файлів, а також для зчитування шляхів до зображень.
 
-# Scheme of the project
+<a name="scheme"><h1>Scheme of the project</h1></a>
 ```mermaid
 graph TD;
     music_player-->modules;
@@ -145,6 +159,8 @@ graph TD;
     music_player-->requirements.txt;
     music_player-->.gitignore;
 ```
+<a name="package_description"><h1>Package description</h1></a>
+After looking at the main scheme of the project, you can now understand why each package and the modules in them are needed.
 
 
 
