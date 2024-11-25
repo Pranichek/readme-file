@@ -126,16 +126,16 @@ If you still don't get how to install python, you can watch [here](https://www.y
 
 ### MODULES FOR DOWNLOADING
 
-* customtkinter - To create a music player GUI/Для створення графічного інтерфейсу музикального плеєру
-* pygame - Loading and playing music for music_app/Завантаження та програвання музики для додатку
-* pillow - For open and process image files before passing them to customtkinter/Для відкриття та обробки файлів зображень перед передачею їх у customtkinter
+* **customtkinter** - To create a music player GUI/Для створення графічного інтерфейсу музикального плеєру
+* **pygame** - Loading and playing music for music_app/Завантаження та програвання музики для додатку
+* **pillow** - For open and process image files before passing them to customtkinter/Для відкриття та обробки файлів зображень перед передачею їх у customtkinter
 
 ### BASE MODULES PYTHON
 
-* os - searching absolute path
-* threading - Used to create and manage streams so that you can play music continuously without stuttering or errors/Використовується для створення потоків і керування ними, для того щоб можна було безперервно програвати музику без зависань та помилок
-* random - Used for the function of playing random music/Використовувся для функції програвання рандомної музики
-* json - Used for reading JSON files and images for project/Використовувався для отримання необхідної інформації з JSON файлів, а також для зчитування шляхів до зображень.
+* **os** - searching absolute path
+* **threading** - Used to create and manage streams so that you can play music continuously without stuttering or errors/Використовується для створення потоків і керування ними, для того щоб можна було безперервно програвати музику без зависань та помилок
+* **random** - Used for the function of playing random music/Використовувся для функції програвання рандомної музики
+* **json** - Used for reading JSON files and images for project/Використовувався для отримання необхідної інформації з JSON файлів, а також для зчитування шляхів до зображень.
 
 <a name="scheme"><h1>Scheme of the project</h1></a>
 ```mermaid
