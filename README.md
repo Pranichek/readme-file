@@ -125,7 +125,7 @@ graph TD;
     music_player-->modules;
     modules-->modules_init["__init__.py"];
     modules-->frames;
-    frames-->["__init__.py"];
+    frames-->init_for_frames["__init__.py"];
     frames-->buttom_frame.py;
     frames-->frame_for_songs.py;
     frames-->main_frame.py;
