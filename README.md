@@ -11,6 +11,14 @@
 
 # Music PLayer
 ## About project
+The main goal of developing this program was to improve skills in working with the customtkinter library and gain experience in creating functional applications with an attractive graphical user interface. 
+Naturally, this program was developed to provide a convenient way to play music on your computer.
+
+Additionally, the development of this project helped to better understand how to work with events, customize interface elements, and leverage various libraries to create a unified functional application. 
+The result is a music player that can serve as a foundation for further enhancement and adding new features, such as fetching relevant information from external music services.
+
+<details>
+<summary>Ukraine version</summary>
 Головною метою розробки цієї програми було вдосконалення своїх навичок роботи з бібліотекою customtkinter, 
 а також отримання досвіду у створенні функціональних додатків із привабливим графічним інтерфейсом.
 Звісно ця програма розроблена для забезпечення зручного  способу відтворення музики на вашому комп'ютері.
@@ -19,14 +27,6 @@
 а також як можна використовувати різні бібліотеки для створення єдиного функціонального додатку. Результатом став музичний плеєр, 
 який можна використовувати як базу для подальшого вдосконалення та додавання нових функцій, 
 таких як брати потрібну інформацію із зовнішніх музичних сервісів.
-
-<details>
-<summary>English version</summary>
-The main goal of developing this program was to improve skills in working with the customtkinter library and gain experience in creating functional applications with an attractive graphical user interface. 
-Naturally, this program was developed to provide a convenient way to play music on your computer.
-
-Additionally, the development of this project helped to better understand how to work with events, customize interface elements, and leverage various libraries to create a unified functional application. 
-The result is a music player that can serve as a foundation for further enhancement and adding new features, such as fetching relevant information from external music services.
 </details>
 
 # Getting Started
@@ -103,6 +103,36 @@ If you still don't get how to install python, you can watch [here](https://www.y
         ``` python
         python main.py
         ```
+
+# MODULES FOR PROGRAM
+
+### MODULES FOR DOWNLOADING
+
+* customtkinter - To create a music player GUI/Для створення графічного інтерфейсу музикального плеєру
+* pygame - Loading and playing music for music_app/Завантаження та програвання музики для додатку
+* pillow - For open and process image files before passing them to customtkinter/Для відкриття та обробки файлів зображень перед передачею їх у customtkinter
+
+### BASE MODULES PYTHON
+
+* os - searching absolute path
+* threading - Used to create and manage streams so that you can play music continuously without stuttering or errors/Використовується для створення потоків і керування ними, для того щоб можна було безперервно програвати музику без зависань та помилок
+* random - Used for the function of playing random music/Використовувся для функції програвання рандомної музики
+* json - Used for reading JSON files and images for project/Використовувався для отримання необхідної інформації з JSON файлів, а також для зчитування шляхів до зображень.
+
+# Scheme of the project
+```mermaid
+erDiagram
+    music_player||--|{ modules
+    modules||--|{ frames
+    modules||--|{ images
+    modules||--|{ json_functions
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+
+
+
+
+
 
 
 
