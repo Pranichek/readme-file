@@ -122,10 +122,10 @@ If you still don't get how to install python, you can watch [here](https://www.y
 # Scheme of the project
 ```mermaid
 graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+    music_player-->modules;
+    modules-->frames;
+    modules-->images;
+    modules-->json_functions;
 ```
 
 
