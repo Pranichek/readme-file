@@ -10,9 +10,13 @@
 10)висновок на укр и на англ(с чем помог проект, как он меня прокачал , чем он был мне полезен)
 ### Table of contents
 [Project description](#headers)  
+
 [Getting started](#getting_started) 
+
 [Modules description](#modules)
+
 [Scheme of project](#scheme)
+
 [Package description](#package_description)
 
 
