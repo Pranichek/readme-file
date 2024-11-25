@@ -126,6 +126,13 @@ graph TD;
     modules-->frames;
     modules-->images;
     modules-->json_functions;
+    music_player-->static;
+    static-->images;
+    static-->config.json;
+    music_player-->main.py;
+    music_player-->README.md;
+    music_player-->requirements.txt;
+    music_player-->.gitignore;
 ```
 
 
