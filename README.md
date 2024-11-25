@@ -123,18 +123,18 @@ If you still don't get how to install python, you can watch [here](https://www.y
 ```mermaid
 graph TD;
     music_player-->modules;
+    modules-->modules_init["__init__.py"];
     modules-->frames;
-    modules-->__init__.py;
-    frames-->__init__.py;
+    frames-->frames_init["__init__.py"];
     frames-->buttom_frame.py;
     frames-->frame_for_songs.py;
     frames-->main_frame.py;
     frames-->side_frame.py;
     modules-->load_images;
-    load_images-->__init__.py;
+    load_images-->load_images_init["__init__.py"];
     load_images-->get_images.py;
     modules-->json_functions;
-    json_functions-->__init__.py;
+    json_functions-->json_functions_init["__init__.py"];
     json_functions-->read_images.py;
     json_functions-->read_json.py;
     music_player-->static;
@@ -143,7 +143,7 @@ graph TD;
     music_player-->main.py;
     music_player-->README.md;
     music_player-->requirements.txt;
-    music_player-->.gitignore;
+    music_player-->gitignore[".gitignore"];
 ```
 
 
