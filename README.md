@@ -169,7 +169,6 @@ graph TD;
     music_player-->requirements.txt;
     music_player-->.gitignore;
 ```
-[⬆️Table of contents](#articles)
 
 <a name="package_description"><h1>Package description</h1></a>
 After looking at the main scheme of the project, you can now understand why each package and the modules in them are needed.
