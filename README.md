@@ -125,7 +125,7 @@ graph TD;
     music_player-->modules;
     modules-->modules_init["__init__.py"];
     modules-->frames;
-    frames-->frames_init["__init__.py"];
+    frames-->["__init__.py"];
     frames-->buttom_frame.py;
     frames-->frame_for_songs.py;
     frames-->main_frame.py;
@@ -143,7 +143,7 @@ graph TD;
     music_player-->main.py;
     music_player-->README.md;
     music_player-->requirements.txt;
-    music_player-->gitignore;
+    music_player-->.gitignore;
 ```
 
 
