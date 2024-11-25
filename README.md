@@ -143,7 +143,7 @@ graph TD;
     music_player-->main.py;
     music_player-->README.md;
     music_player-->requirements.txt;
-    music_player-->gitignore[".gitignore"];
+    music_player-->gitignore;
 ```
 
 
