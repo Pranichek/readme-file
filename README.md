@@ -10,17 +10,26 @@
 10)висновок на укр и на англ(с чем помог проект, как он меня прокачал , чем он был мне полезен)
 <a name="articles"><h3>Table of contents</h3></a>
 
-[Project description](#headers)  
+# Project Description  
+[Project description](#headers)
 
-[Getting started](#getting_started) 
+# Getting Started  
+[Getting started](#getting_started)
 
+# Modules Description  
 [Modules description](#modules)
 
+# Project Scheme  
 [Scheme of project](#scheme)
 
-- [Package description](#package_description)
-    -   [Frame package](#frame_package)
-        -   [File main._framepy](#main_frame.py)
+## Package Description  
+[Package description](#package_description)
+
+### Frame Package  
+[Frame package](#frame_package)
+
+#### File: `main_frame.py`  
+[File main_frame.py](#main_frame.py)
 
 
 
