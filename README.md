@@ -240,10 +240,10 @@ After viewing the code of the main window, let's go to the file where we create 
 # buttom_frame.py
 The file buttom_frame.py contains all the functions and logic for creating and managing buttons in the bottom frame of the application. 
 
-1. Import all modules that we need for buttom frame
+## Modules that we need for buttom frame
 
 <details>
-<!-- <summary>Modules</summary> -->
+<summary>Modules</summary>
 
 ```python
     # Import module pygame , that can play music
