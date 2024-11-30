@@ -358,7 +358,7 @@ Below you can see the complete solution to this problem.
 </details>
 
 <details>
-<summary>Dliting songs</summary>
+<summary>Deleting songs</summary>
 
 ```python
 # List for manage what song need to del
