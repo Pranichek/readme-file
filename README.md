@@ -732,7 +732,7 @@ def random_music_theread():
  [⬆️Table of contents](#articles) 
 
 
-<a name="buttons_for_buttom_panel"><h2>Create Buttons for buttom panel</h2></a>
+<a name="buttons_buttom_panel"><h2>Create Buttons for buttom panel</h2></a>
 
 The last part of this file is responsible for creating and placing the buttons in the bottom row of the interface, located in the frame_buttom. Each button performs a specific action, such as adding or removing a song, shuffling a song, or adjusting the volume.
 Thus, the use of the program becomes clear, and controlling songs, playback, and sound settings is more convenient with the program interface.
@@ -852,6 +852,8 @@ button_sound_down.grid(row = 0 , column = 4)
 ```
 
 </details>
+
+ [⬆️Table of contents](#articles) 
 
 
 
