@@ -32,7 +32,7 @@
             -   [Function wich delete songs](#delete_songs)
             -   [Functions for editing volume](#edit_volume)
             -   [Function that play random songs](#random_songs)
-            -   [Create buttons for buttom panel](#buttons_for_buttom_panel)
+            -   [Create buttons for buttom panel](#buttons_buttom_panel)
 
 
 
