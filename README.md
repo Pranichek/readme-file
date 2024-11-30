@@ -404,6 +404,80 @@ def delete_song():
 </details>
 
 
+## Volume Editing
+
+The volume functions implement an intuitive approach to controlling the sound level.
+First, we get the current volume level and store it in the list_for_volume so that we can change this value in the future.
+
+The add_volume function increases the volume by 0.1 and applies the new value. If the level exceeds the maximum allowable volume, it is automatically set to 1.
+
+The minus_volume function does the same thing, but decreases the volume by 0.1. If the level falls below the minimum value, it is set to 0 to avoid incorrect player operation.
+
+This approach provides smooth sound adjustment and protection against incorrect volume values
+
+ <details>
+ <summary>Ukrainian version</summary>
+У функціях зміни гучності реалізовано інтуїтивно зрозумілий підхід для управління рівнем звуку.
+Спочатку ми отримуємо поточний рівень гучності  і зберігаємо його в список list_for_volume, щоб мати можливість змінювати це значення в майбутньому.
+
+Функція add_volume збільшує гучність на 0.1 і застосовує нове значення. Якщо рівень перевищує максимальну допустиму гучність, він автоматично встановлюється на 1.
+
+Функція minus_volume діє аналогічно, але зменшує гучність на 0.1. Якщо рівень падає нижче мінімального значення, він встановлюється на 0, щоб уникнути некоректної роботи програвача.
+
+Цей підхід забезпечує плавне регулювання звуку та захист від некоректних значень гучності
+ </details>
+
+ <details>
+ <summary>Volume editing</summary>
+
+```python
+# We get what the current volume of the sound is
+# Отримуємо яка зараз гучність звуку
+volume = pygame.mixer.music.get_volume()
+# Save the volume to list
+# Зберігаємо гучність у список
+list_for_volume = [volume]
+# Set volume from the data i list
+# Встановлюємо гучність звуку за парметром із списку
+pygame.mixer.music.set_volume(list_for_volume[0])
+
+#Fucntion for add volume
+# Функція додавання гучності 
+def add_volume(): 
+    # increase volume by 0.1
+    # збільшуємо гучність звуку на 0.1
+    list_for_volume[0] += 0.1
+    # set the new volume into the mixer music
+    # встановлюємо нову гучність звуку 
+    pygame.mixer.music.set_volume(list_for_volume[0])
+    print(list_for_volume[0])
+    # If make volume more the max volume , take it the 1
+    # Якщо ми превисили гучність звуку , то встановлюємо 1
+    if list_for_volume[0] > 1.1:
+        list_for_volume[0] = 1
+        pygame.mixer.music.set_volume(list_for_volume[0])
+
+
+# Function that reduces the volume
+# Функція яка зменшує гучність 
+def minus_volume():
+    # decrease volume by 0.1
+    # зменшуємо гучність звуку на 0.1
+    list_for_volume[0] -= 0.1
+    # set the new volume into the mixer music
+    # встановлюємо нову гучність звуку
+    pygame.mixer.music.set_volume(list_for_volume[0])
+    print(list_for_volume[0])
+    # If make volume less the 0, take it the 0
+    # Якщо зробили гучність звуку менш ніж 0,01 , то встановлюємо гучність на 0
+    if list_for_volume[0] < 0.01:
+        list_for_volume[0] = 0
+        pygame.mixer.music.set_volume(list_for_volume[0])
+```
+
+ </details>
+
+
 
 
 
