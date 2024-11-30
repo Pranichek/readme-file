@@ -30,7 +30,7 @@
         -   [Module description in file button_frame.py](#button_frame_modules)
         -   [Function wich load songs to project](#load_songs)
         -   [Function wich delete songs](#delete_songs)
-        -   [Functions for editing volume][#"edit_volume"]
+        -   [Functions for editing volume](#edit_volume)
         -   [Function that play random songs](#random_songs)
         -   [Crate buttons for buttom panel](#buttons_for_buttom_panel")
 
