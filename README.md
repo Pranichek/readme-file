@@ -19,7 +19,7 @@
 [Scheme of project](#scheme)
 
 - [Package description](#package_description)
-    - [File button.py](#buttom_file.py)
+    -   [File buttom_frame.py](#buttom_frame.py)
 
 
 
