@@ -236,6 +236,7 @@ Let's start with package frames , which contains all the files associated with a
 
 After viewing the code of the main window, let's go to the file where we create the buttons located in the bottom panel of the program and their functions.
 
+<details>
 <summary>On Ukraine language</summary>
 Після просмотру коду головного вікна, перейдемо до файлу де створюємо кнопки які розтошавані у нижній панелі програми , та їхніми функціями.
 </details>
