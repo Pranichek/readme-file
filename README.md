@@ -245,38 +245,39 @@ The file buttom_frame.py contains all the functions and logic for creating and m
 <details>
 <!-- <summary>Modules</summary> -->
 
-    ```python
-        # Import module pygame , that can play music
-        # Імпортуємо модуль pygame , який дозволяє програвати музику
-        import pygame
-        # Import module random for randomizing songs
-        # Імпортуємо модуль який допоможе рандомно програвати музику
-        import random as r
-        # Import module os for working with directories
-        # Імпортуємо модуль який працює із директоріями
-        import os
-        # Import module that can create Dekstop programs 
-        # Імпортуємо необхідний модуль для створення Dekstop програм
-        import customtkinter as ctk
-        # Import function that can creates thread 
-        # Імпортуємо моудль який може створювати потоки 
-        from threading import Thread 
-        # Import module that can work with directories of computer
-        # Імпортуємо модуль який може працювати із директоріями проєкту
-        from customtkinter import filedialog
-        # Import main frame , where we places all another frames
-        # Імпортуємо головний екран , на якому можемо розташовувати всі інші фрейми
-        from .main_frame import app
-        # Import images for buttons
-        # Імпортуємо зображення для кнопок
-        from ..load_images.get_images import image_add_song, image_del_song , image_mix_songs , image_sound_up , image_sound_down
-        # Import frame where we places buttons with name of songs
-        # Імпортуємо фрейм на якому розташовуємо кнопки із назвами пісень
-        from .frame_for_songs import frame_treks , list_songs 
-        # Import all lists for manages program
-        # Імпортуємо всі лісти які допомогають керувати програмою
-        from .side_frame import event_pause , list_check_stop , label_for_show_name, list_flipping_song  , list_for_button, what_event
-    ```
+```python
+    # Import module pygame , that can play music
+    # Імпортуємо модуль pygame , який дозволяє програвати музику
+    import pygame
+    # Import module random for randomizing songs
+    # Імпортуємо модуль який допоможе рандомно програвати музику
+    import random as r
+    # Import module os for working with directories
+    # Імпортуємо модуль який працює із директоріями
+    import os
+    # Import module that can create Dekstop programs 
+    # Імпортуємо необхідний модуль для створення Dekstop програм
+    import customtkinter as ctk
+    # Import function that can creates thread 
+    # Імпортуємо моудль який може створювати потоки 
+    from threading import Thread 
+    # Import module that can work with directories of computer
+    # Імпортуємо модуль який може працювати із директоріями проєкту
+    from customtkinter import filedialog
+    # Import main frame , where we places all another frames
+    # Імпортуємо головний екран , на якому можемо розташовувати всі інші фрейми
+    from .main_frame import app
+    # Import images for buttons
+    # Імпортуємо зображення для кнопок
+    from ..load_images.get_images import image_add_song, image_del_song , image_mix_songs , image_sound_up , image_sound_down
+    # Import frame where we places buttons with name of songs
+    # Імпортуємо фрейм на якому розташовуємо кнопки із назвами пісень
+    from .frame_for_songs import frame_treks , list_songs 
+    # Import all lists for manages program
+    # Імпортуємо всі лісти які допомогають керувати програмою
+    from .side_frame import event_pause , list_check_stop , label_for_show_name, list_flipping_song  , list_for_button, what_event
+```
+
 </details>
 
 
