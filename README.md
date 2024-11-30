@@ -34,7 +34,7 @@ to create a unified functional application. The result is a music player that ca
 improvements and the addition of new features, such as retrieving relevant information from external music services.
 
 <details>
-<summary>Ukrainian version</summary>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 Головною метою розробки цієї програми було вдосконалення своїх навичок роботи з бібліотекою customtkinter, 
 та отримання досвіду у створенні функціональних додатків із привабливим графічним інтерфейсом у Python.
 Звісно не можна сказати що ця програма ідеальна, але цей проєкт слугував меня як навчальний інструмент для поглиблення 
@@ -178,12 +178,20 @@ After looking at the main scheme of the project, you can now understand why each
 Let's start with package frames , which contains all the files associated with application frames, and functions that help manage buttons correctly.The first file we will look at in this package will be main_frame.py , which creates the main application window.
 
 <details>
-<summary>Ukrainian version</summary>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 Розглянувши основну схему проекту, тепер ви можете зрозуміти, для чого потрібен кожен пакет і модулі в них.
 Почнемо з пакету frames, який містить усі файли, пов’язані з вікнами програми, і функціями, які допомагають правильно керувати кнопками. Першим файлом, який ми розглянемо в цьому пакеті, буде main_frame.py, який створює головне вікно програми.
 </details>
 
 # main_frame.py
+The main.py file is created to initialize the main window of the program and place the main interface elements on it. I can also note that I have specifically allocated this file for the code to improve the structure of the project, making it clearer and easier to maintain. The file is solely responsible for creating the main window of the program, leaving the other functions of the program in separate files.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Файл main.py створюється для ініціалізації головного вікна програми та розміщення на ньому основних елементів інтерфейсу. Також можу зазначити, що я виділив спеціально цей файл для коду, щоб покращити структуру проекту, зробивши його зрозумілішим і легшим для підтримки. Файл відповідає виключно за створення головного вікна програми, залишаючи інші функції програми у окремих файлах.
+</details>
+
+
 
 ```python
     # Importing module that can create Dekstop programs 
@@ -237,12 +245,20 @@ Let's start with package frames , which contains all the files associated with a
 After viewing the code of the main window, let's go to the file where we create the buttons located in the bottom panel of the program and their functions.
 
 <details>
-<summary>On Ukraine language</summary>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 Після просмотру коду головного вікна, перейдемо до файлу де створюємо кнопки які розтошавані у нижній панелі програми , та їхніми функціями.
 </details>
 
 # buttom_frame.py
-The file buttom_frame.py contains all the functions and logic for creating and managing buttons in the bottom frame of the application. 
+
+The buttom_frame.py file is a significant part of the music player. It implements functions for loading, playing, changing the volume, and randomizing songs. It allows the user to add songs to a playlist from a selected directory, display buttons with song names on the screen, and remove songs from the list. Volume control functions (increase and decrease) are also included in the interface. The ability to play random songs is built in, taking into account that the same song is not played twice in a row. There are also functions for pausing and continuing music playback. Below is a full description of each function in this file.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Файл buttom_frame.py є значною частиною музичного плеєра. У ньому реалізовані функції для завантаження, відтворення, зміни гучності та випадкового відтворення пісень. Він дозволяє користувачеві додавати пісні в плейлист з вибраної директорії, відображати кнопки з назвами пісень на екрані, а також видаляти пісні зі списку. Функції регулювання гучності (збільшення та зменшення) також включені в інтерфейс. Вбудована можливість відтворення випадкових пісень з урахуванням того, щоб та сама пісня не програвалася двічі поспіль. Також є функції для паузи та продовження відтворення музики.Нижче буде написане повний опис кожної функції у цьому файлі.
+</details>
+
+# buttom_frame.py
 
 ## Modules that we need for buttom frame
 
@@ -349,7 +365,7 @@ In the first version of this function, I encountered a problem that all buttons 
 Below you can see the complete solution to this problem.
 
 <details>
-<summary>Ukrainian version</summary>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 Якщо б мене запитали, яка частина проєкту була найскладнішою, я б без вагань відповів, що це функція видалення пісень.
 
 У першій версії цієї функції я зіткнувся з проблемою , що для всіх кнопок передавалася лише одна й та сама назва пісні, незалежно від того, яку саме кнопку натискали. Я шукав рішення кілька днів і, зрештою, зрозумів, що найкращим варіантом буде використання lambda-функцій для кожної кнопки. Це дозволило мені точно визначати, на яку саме кнопку натиснули, і відповідно видаляти потрібну пісню.
@@ -416,7 +432,7 @@ The minus_volume function does the same thing, but decreases the volume by 0.1. 
 This approach provides smooth sound adjustment and protection against incorrect volume values
 
  <details>
- <summary>Ukrainian version</summary>
+ <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 У функціях зміни гучності реалізовано інтуїтивно зрозумілий підхід для управління рівнем звуку.
 Спочатку ми отримуємо поточний рівень гучності  і зберігаємо його в список list_for_volume, щоб мати можливість змінювати це значення в майбутньому.
 
@@ -476,6 +492,221 @@ def minus_volume():
 ```
 
  </details>
+
+ ## Random play songs
+
+ Now we can look at the random song playback function. In my opinion, this part of the file is perhaps the most difficult in this file. It selects a song that has not yet been played and plays it, changing the song name on the screen. If the song was paused, the function unpauses and continues playing from the place where it was stopped. The function also takes into account the possibility of skipping songs or returning to the previous one through the corresponding interface buttons. All songs that have already been played are added to the list to avoid repetitions. You can see the full code description below
+
+ <details>
+ <summmary>🇺🇦 Ukrainian version 🇺🇦</summary>
+ Тепер можемо подивитися функцію програвання рандомних пісень.На мою думку ця частина файлу є чи не найтяжчей у цьому файлі.Вона вибирає пісню, яку ще не грали, і відтворює її, змінюючи назву пісні на екрані. Якщо пісня була поставлена на паузу, функція знімає паузу і продовжує відтворення з того місця, де було зупинено. Функція також враховує можливість пропуску пісень або повернення до попередньої через відповідні кнопки інтерфейсу. Всі пісні, що були вже програні, додаються до списку, щоб уникнути повторів. Повний опис коду можете продивитися нижче
+ </details>
+
+ <details>
+ <summary>Function of random playing songs</summary>
+
+ ```python
+ # Function for playing random song
+# Функція для програввання рандомної музики
+def random_song():
+    # set a list what_event to "random"
+    # передаємо у ліст what_event значення "random", це значить що зараз пісні грають на рандом
+    what_event[0] = "random"
+    # get the initial length of the list of songs
+    # отримуємо початкову довжину списку із піснями 
+    static_len_list_songs = len(list_songs)
+    # a checklist to make sure the same song doesn't play twice
+    # список для перевірки щоб не грала одна та тажа пісня два рази
+    same_song_list = [None]
+    # list of what random song is playing now
+    # список яка зараз рандомна пісня грає
+    list_for_random_song = [None]
+    # leet for storing the previous song
+    # лист для зберігання попередньої пісні
+    prev_song = [""]
+    #if the song was paused and we pressed play again, then the song would start playing from the last moment it was paused
+    #якщо пісня була поставлена ​​на паузи і ми знову натиснули на грати, то щоб пісня почала грати з останнього моменту зупинки
+    if not event_pause.is_set():
+        #we set True into event_pause (we say that we took the song off pause)
+        # задаємо True into event_pause (кажемо, що зняли пісню з паузи)
+        event_pause.set()
+        # unpause the music
+        pygame.mixer.music.unpause()
+    # If there is no break now, then we just play random songs
+    # якщо зараз не пауза, то просто відіграємо рандомні пісні
+    else:
+        # we make an infinite loop so that the songs play until the stop button is pressed, or until they end
+        # робимо нескінченний цикл , для того щоб пісні відігравалися доки не натиснута кнопка стоп, або поки вони не закінчаться
+        while True:
+            #if there is something stored in the storage list before the last song, then we play the last song before
+            #якщо у списку зберігання пред останньої пісні щось зберігається то вілаграємо пред останню пісню
+            if prev_song[0] != "":
+                # split the song into the name and file extension to output only the song name
+                # ділимо пісню на назву та розширення файлу, щоб виводити лише назву пісні
+                name , file  = prev_song[0].split(".mp3")
+                #Change the label text to show the name of the song currently playing to the name of the previous song
+                #Змінюємо текст label для показу назви пісні яка зараз грає , на назву предостаньї пісні
+                label_for_show_name.configure(text = name)
+                # Play the previous song
+                # Відіграємо предостанню пісню
+                pygame.mixer.music.load(prev_song[0])
+                pygame.mixer.music.play()
+                # transfer the current song, previous music to the list
+                # Передаємо у список поточної пісні , попередню музику
+                list_for_random_song[0] = prev_song[0]
+            # If the user hasn't flipped through the songs, we'll just play the next random song.
+            # Якщо користувач не перегортав пісні, то просто програємо наступну рандомну пісню
+            elif list_for_random_song[0] == same_song_list[-1]:
+                if same_song_list[0] == None:
+                    same_song_list = []
+                
+                # Select the next random song from the list
+                # Вибираємо наступну рандомну пісню із списку
+                list_for_random_song[0] = r.choice(list_songs)
+                # doing a search for songs in the list of songs that have already been played
+                # Робимо перебор пісень у списку пісень які вже грали
+                for same_song in same_song_list:
+                    # If such music has already been played, then we randomly select other music that has not been played yet.
+                    # Якщо така музика вже грала, то вибираємо рандомно іншу музику якої ще не грала
+                    if same_song == list_for_random_song[0]:
+                        # do an infinite loop until we find a song that hasn't been played yet
+                        # Робимо бескінечний цикл поки не знайдемо пісні яка ще не грала
+                        while list_for_random_song[0] in same_song_list:
+                            list_for_random_song[0] = r.choice(list_songs)
+
+                # Add the song to the list of songs that have already been played so that it will not be played again next time
+                # Додаємо пісню до списку пісень які вже грали , щоб у наступний раз вона вже не грала
+                same_song_list.append(list_for_random_song[0])
+                # split the song into the name and file extension to output only the song name
+                # ділимо пісню на назву та розширення файлу, щоб виводити лише назву пісні
+                name , file  = list_for_random_song[0].split(".mp3")
+                #Change the label text to show the name of the song that should be playing now.
+                #Змінюємо текст label для показу назви пісні яка зараз повинна грати
+                label_for_show_name.configure(text = name)
+                # Play the selected song
+                # Завантажуємо та відіграємо пісню яку вибрали із списку list_songs
+                pygame.mixer.music.load(list_for_random_song[0])
+                pygame.mixer.music.play()
+            
+            #If the user scrolled back through the page and now scrolls forward, then execute the code below
+            #Якщо користувач перегортав пісін назад , а зараз перегортає у перед , то виконує код нижче
+            elif list_for_random_song[0] != same_song_list[-1]:
+                #Looking for the song index of the song currently playing
+                #Шукаємо індекс пісні яка зараз пісня грає
+                index_next_song = same_song_list.index(list_for_random_song[0])
+                # By adding to index 1 , select the next song
+                # Через додавання до індексу 1 , вибираємо наступну пісню 
+                next_song = same_song_list[index_next_song + 1]
+                # Update the current song
+                # Оновлюємо поточну пісню
+                list_for_random_song[0] = next_song
+                # split the song into the name and file extension to output only the song name
+                # ділимо пісню на назву та розширення файлу, щоб виводити лише назву пісні
+                name , file  = next_song.split(".mp3")
+                #Change the label text to show the name of the song that should be playing now
+                # Змінюємо текст label для показу назви пісні яка зараз повинна грати
+                label_for_show_name.configure(text = name)
+                # Play the next song
+                # Завантажуємо та відіграємо наступну пісню
+                pygame.mixer.music.load(next_song)
+                pygame.mixer.music.play()
+            
+            # clear the list for previous song
+            # очищаємо список для зберігання попередньої пісні
+            prev_song[0] = ""
+
+            # iterate through the list of buttons with song names to understand which one is currently playing
+            # Робимо перебор списку кнопок із назвами пісень, щоб зрозуміти яка зараз грає
+            for button in list_for_button:
+                try:
+                    #if the button text matches the lyrics of the song we are currently playing, then we change its color to orange
+                    #якщо текст кнопки співпадє з текстом пісні яка зараз граємо, то змінюємо її колір на оранжевий
+                    if button._text == label_for_show_name._text:
+                        button.configure(fg_color = "orange")
+                    #For other buttons, change the color to blue
+                    #Для інших кнопок змінюмо колір на синій
+                    else:
+                        button.configure(fg_color = "#3b8ecf")
+                except Exception as error:
+                    print(error)
+            # make an infinite loop while the music is playing, so that it always plays to the end, and does not immediately skip to the next one
+            # Робимо нескінчений цикл поки грає музика, щоб вона зажди грала до кінця , а не одразу перегорталась на наступну
+            while pygame.mixer.music.get_busy():  
+                # If the user presses the pause button, pause the music and wait until the user presses it again to resume
+                # Якщо користувач натиснув кнопку паузи, призупиніть музику та зачекайте, доки користувач не натисне її знову, щоб відновити
+                if not event_pause.is_set():
+                    pygame.mixer.music.pause()
+                    #stop the thread, and it will continue only if evebt_pause is True(event_pause.set()), that is, we will unpause
+                    #Зупиняємо потік, і він продовжиться тільки в тому випадку, коли в evebt_pause буде True(event_pause.set()) , тобто знімемо з паузи
+                    event_pause.wait()
+                # If user presses the "next_song" button , skip the current iteration
+                # Якщо користувач натиснув кнопку "наступна пісня", пропускаємо поточний цикл
+                if list_flipping_song[0] == True:
+                    if len(same_song_list) >= static_len_list_songs:
+                        pass
+                    else:
+                        list_flipping_song[0] = False
+                        pygame.mixer.music.stop()
+                        continue
+                
+                # If user presses the "previous_song" button , thne make the codes below
+                # Якщо користувач натиснув кнопку "попередня пісня" , робимо код нижче
+                if list_flipping_song[0] == "Back":
+                    # Stop the music
+                    # Зупиняємо музику
+                    pygame.mixer.music.stop()
+                    #clear the list to store the state of which button is pressed (forward or back)
+                    #очищаємо список для зберігання стану яка кнопка нажата(вперед , або назад)
+                    list_flipping_song[0] = False
+                    # Search an index of current song
+                    # Шукаємо індекс пісні яка зараз грає
+                    index_song = same_song_list.index(list_for_random_song[0])
+                    # If thiis is a first song in the list , just choise again the first song
+                    # Якщо це перша пісня в списку, просто знову виберіть першу пісню
+                    if index_song < 1:
+                        prev_song[0] = same_song_list[index_song]
+                    # If it is not the first song in the list , search an index of previous song
+                    # Якщо це не перша пісня в списку, знайдіть індекс попередньої пісні
+                    else:
+                        prev_song[0] = same_song_list[index_song - 1]
+                    print(prev_song[0])
+               
+                # If in the list of check button "stop" more then 1 , it's mean program have to stop the music
+                # Якщо в списку перевірочних кнопок «стоп» більше 1, це означає, що програма повинна зупинити музику
+                if list_check_stop[0] > 0:
+                    # Stop the music
+                    # Зупиняємо музику
+                    pygame.mixer.music.stop()
+                    # Clear the list of check button "stop"
+                    # Очищаємо список для перевірки кнопки «стоп»
+                    list_check_stop[0] = 0
+                    # Change the text of label wich show what song is playing to "Stop" 
+                    # Змініть текст мітки, яка показує, яка пісня відтворюється, на "Зупинити"
+                    label_for_show_name.configure(text = "Stop")
+                    # Exit from loop 
+                    # Виходимо із циклу
+                    exit()
+
+            # If the list wich save what song alread played more or equal to list of list_songs , exit from the loop
+            # Якщо список, який зберігає пісні, які вже грали, більше або дорівнює списку list_songs, вийдіть із циклу
+            if len(same_song_list) >= static_len_list_songs:
+                print("End of song list")
+                break
+            pygame.mixer.music.stop()
+       
+#Function wich create a thread to play random songs
+# Функція яка створює та запускає поток для відігравання рандомних пісень
+def random_music_theread():
+    # Create a thread
+    # Створюємо поток 
+    random_music = Thread(target = random_song)
+    # Start the thread
+    # Запускаємо поток
+    random_music.start()
+ ```
+ </details>
+
+
 
 
 
