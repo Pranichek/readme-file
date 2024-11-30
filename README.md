@@ -180,7 +180,7 @@ Let's start with package frames , which contains all the files associated with a
 Почнемо з пакету frames, який містить усі файли, пов’язані з вікнами програми, і функціями, які допомагають правильно керувати кнопками. Першим файлом, який ми розглянемо в цьому пакеті, буде main_frame.py, який створює головне вікно програми.
 </details>
 
-'''python
+```python
     # Importing module that can create Dekstop programs 
     # Імпортуємо необхідний модуль для створення Dekstop програм
     import customtkinter as ctk
@@ -225,7 +225,7 @@ Let's start with package frames , which contains all the files associated with a
     # Sets the title of the window
     # Даємо назву вікну
     app.title(title)
-'''
+```
 
 
 
