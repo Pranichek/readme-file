@@ -19,7 +19,8 @@
 [Scheme of project](#scheme)
 
 - [Package description](#package_description)
-    -   [File buttom_frame.py](#buttom_frame.py)
+    -   [Frame package](#frame_package)
+        -   [File main._framepy](#main_frame.py)
 
 
 
@@ -174,7 +175,7 @@ graph TD;
 
 <a name="package_description"><h1>Package description</h1></a>
 
-# Frame package
+<a name="frame_package"><h1>Frame package</h1></a>
 
 After looking at the main scheme of the project, you can now understand why each package and the modules in them are needed.
 Let's start with package frames , which contains all the files associated with application frames, and functions that help manage buttons correctly.The first file we will look at in this package will be main_frame.py , which creates the main application window.
@@ -185,12 +186,12 @@ Let's start with package frames , which contains all the files associated with a
 Почнемо з пакету frames, який містить усі файли, пов’язані з вікнами програми, і функціями, які допомагають правильно керувати кнопками. Першим файлом, який ми розглянемо в цьому пакеті, буде main_frame.py, який створює головне вікно програми.
 </details>
 
-# main_frame.py
-The main.py file is created to initialize the main window of the program and place the main interface elements on it. I can also note that I have specifically allocated this file for the code to improve the structure of the project, making it clearer and easier to maintain. The file is solely responsible for creating the main window of the program, leaving the other functions of the program in separate files.
+<a name="main_frame.py"><h1>main_frame.py</h1></a>
+The main_frame.py file is created to initialize the main window of the program and place the main interface elements on it. I can also note that I have specifically allocated this file for the code to improve the structure of the project, making it clearer and easier to maintain. The file is solely responsible for creating the main window of the program, leaving the other functions of the program in separate files.
 
 <details>
 <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
-Файл main.py створюється для ініціалізації головного вікна програми та розміщення на ньому основних елементів інтерфейсу. Також можу зазначити, що я виділив спеціально цей файл для коду, щоб покращити структуру проекту, зробивши його зрозумілішим і легшим для підтримки. Файл відповідає виключно за створення головного вікна програми, залишаючи інші функції програми у окремих файлах.
+Файл main_frame.py створюється для ініціалізації головного вікна програми та розміщення на ньому основних елементів інтерфейсу. Також можу зазначити, що я виділив спеціально цей файл для коду, щоб покращити структуру проекту, зробивши його зрозумілішим і легшим для підтримки. Файл відповідає виключно за створення головного вікна програми, залишаючи інші функції програми у окремих файлах.
 </details>
 
 
