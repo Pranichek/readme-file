@@ -18,7 +18,9 @@
 
 [Scheme of project](#scheme)
 
-[Package description](#package_description)
+- [Package description](#package_description)
+    - [File button.py](#butttom_file.py)
+
 
 
 # Music PLayer
@@ -249,7 +251,8 @@ After viewing the code of the main window, let's go to the file where we create 
 Після просмотру коду головного вікна, перейдемо до файлу де створюємо кнопки які розтошавані у нижній панелі програми , та їхніми функціями.
 </details>
 
-# buttom_frame.py
+
+<a name="buttom_frame.py"><h1>buttom_frame.py</h1></a>
 
 The buttom_frame.py file is a significant part of the music player. It implements functions for loading, playing, changing the volume, and randomizing songs. It allows the user to add songs to a playlist from a selected directory, display buttons with song names on the screen, and remove songs from the list. Volume control functions (increase and decrease) are also included in the interface. The ability to play random songs is built in, taking into account that the same song is not played twice in a row. There are also functions for pausing and continuing music playback. Below is a full description of each function in this file.
 
@@ -307,7 +310,7 @@ The first time I sat down to make a project, the most basic question was how to 
 In this part of the code description, you can see a complete description of this question.
 
 <details>
-<summary>Adding songs</summary>
+<summary>Adding songs code</summary>
 
 ```python
 
@@ -373,7 +376,7 @@ Below you can see the complete solution to this problem.
 </details>
 
 <details>
-<summary>Deleting songs</summary>
+<summary>Deleting songs code</summary>
 
 ```python
 # List for manage what song need to del
@@ -443,7 +446,7 @@ This approach provides smooth sound adjustment and protection against incorrect 
  </details>
 
  <details>
- <summary>Volume editing</summary>
+ <summary>Volume editing code</summary>
 
 ```python
 # We get what the current volume of the sound is
@@ -504,7 +507,7 @@ def minus_volume():
 
 
  <details>
- <summary>Function of random playing songs</summary>
+ <summary>Function code of random playing songs</summary>
 
  ```python
  # Function for playing random song
@@ -706,6 +709,128 @@ def random_music_theread():
     random_music.start()
  ```
  </details>
+
+ ## Create Buttons for buttom panel
+
+The last part of this file is responsible for creating and placing the buttons in the bottom row of the interface, located in the frame_buttom. Each button performs a specific action, such as adding or removing a song, shuffling a song, or adjusting the volume.
+Thus, the use of the program becomes clear, and controlling songs, playback, and sound settings is more convenient with the program interface.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Остання частина цього файлу відповідає для створення та розташування кнопок у нижньому ряду інтерфейсу, що знаходиться у фреймі frame_buttom. Кожна кнопка виконує певну дію, наприклад, додавання або видалення пісні, змішування пісні або регулювання гучності.
+Таким чином, використання програми стає зрозумілим, а керування піснями, відтворенням та налаштуваннями звуку зручнішим з інтерфейсом програми.
+</details>
+
+<details>
+<summary>The code of creating buttons for buttom panel</summary>
+
+```python
+# Create a frame for the bottom row of buttons
+# Створюємо фрейм  де будемо розставляти кнопки 
+frame_buttom = ctk.CTkFrame(master = app , width = 405 , height = 58 , fg_color = "#4cb7ce")
+# place this frame at the desired coordinates
+# Створюємо фрейм для кнопок які розташовані у нижньому ряду
+frame_buttom.place(x = 25 , y = 397)
+
+# Adjust the grid to correctly position objects in this frame
+# Робимо налаштування сітки для правильного розтагування об'єктів в цьому фреймі
+frame_buttom.columnconfigure((0,1,2,3,4), weight = 1) #| | | | |
+frame_buttom.rowconfigure(0 , weight = 1) # -
+
+# Create a button to add songs to project
+# Додаемо кнопку яка буде завантажувати пісні до проєкту
+buttom_add = ctk.CTkButton(master = frame_buttom , 
+                           text= "" ,
+                           width = 61 , 
+                           height = 58, 
+                           fg_color= "#bdbdbd", 
+                           border_color = "black" , 
+                           corner_radius = 20, 
+                           border_width = 4, 
+                           image = image_add_song , 
+                           anchor = "center" , 
+                           command = open_songs)
+# Place it in the first(0) row and first(0) column
+# Розташоваємо її у першому рядку та першій колонці
+buttom_add.grid(row = 0 , column = 0 , padx = (0 , 25))
+
+
+# Create a button to delete songs from project
+# Створюємо кнопку яка буде видаляти пісні
+buttom_delete = ctk.CTkButton(master = frame_buttom , 
+                              text= "" , 
+                              width = 61 , 
+                              height = 58, 
+                              fg_color= "#bdbdbd", 
+                              border_color = "black" , 
+                              corner_radius = 20, 
+                              border_width = 4, 
+                              image = image_del_song , 
+                              anchor = "center",
+                              command = delete_song)
+# Place it in the first(0) row and second(1) column
+# Розташоваємо її у першому рядку та у другій колонці
+buttom_delete.grid(row = 0 , column = 1 , padx = (0 , 25))
+
+
+# Create a button to play random songs
+# Створюємо кнпоку яка буде рандомно видігравати пісні
+buttom_mix = ctk.CTkButton(master = frame_buttom , 
+                           text= "" , 
+                           width = 61 , 
+                           height = 58, 
+                           fg_color= "#bdbdbd", 
+                           border_color = "black" , 
+                           corner_radius = 20, 
+                           border_width = 4, 
+                           image = image_mix_songs , 
+                           anchor = "center", 
+                           command = random_music_theread
+                           ) 
+# Place it in the first(0) row and third(2) column
+# Розташоваємо її у першому рядку та третій колонці
+buttom_mix.grid(row = 0 , column = 2, padx = (0 , 25))
+
+# Create button for volume up
+# Створюємо кнопку яка буде підвищує гучність
+button_sound_up = ctk.CTkButton(master = frame_buttom , 
+                                text= "" , 
+                                width = 61 , 
+                                height = 58, 
+                                fg_color= "#bdbdbd", 
+                                border_color = "black" , 
+                                corner_radius = 20, 
+                                border_width = 4, 
+                                image = image_sound_up , 
+                                anchor = "center", 
+                                command = add_volume
+                                )
+# Place it in the first(0) row and fourth(3) column
+# Розташоваємо її у першому рядку та четвертій колонці
+button_sound_up.grid(row = 0 , column = 3 , padx = (0 , 25))
+
+
+# Create button for volume down
+# Створюємо кнопку яка робить гучність ниже
+button_sound_down = ctk.CTkButton(master = frame_buttom , 
+                                  text= "" , 
+                                  width = 61 , 
+                                  height = 58, 
+                                  fg_color= "#bdbdbd", 
+                                  border_color = "black" , 
+                                  corner_radius = 20, 
+                                  border_width = 4, 
+                                  image = image_sound_down , 
+                                  anchor = "center", 
+                                  command = minus_volume
+                                  )
+# Place it in the first(0) row and fifth(4) column
+# Розташоваємо її у першому рядку та п'ятій колонці
+button_sound_down.grid(row = 0 , column = 4)
+```
+
+</details>
+
 
 
 
