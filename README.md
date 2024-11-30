@@ -34,7 +34,7 @@ to create a unified functional application. The result is a music player that ca
 improvements and the addition of new features, such as retrieving relevant information from external music services.
 
 <details>
-<summary>Ukraine version</summary>
+<summary>Ukrainian version</summary>
 Головною метою розробки цієї програми було вдосконалення своїх навичок роботи з бібліотекою customtkinter, 
 та отримання досвіду у створенні функціональних додатків із привабливим графічним інтерфейсом у Python.
 Звісно не можна сказати що ця програма ідеальна, але цей проєкт слугував меня як навчальний інструмент для поглиблення 
@@ -171,11 +171,14 @@ graph TD;
 ```
 
 <a name="package_description"><h1>Package description</h1></a>
+
+# Frame package
+
 After looking at the main scheme of the project, you can now understand why each package and the modules in them are needed.
 Let's start with package frames , which contains all the files associated with application frames, and functions that help manage buttons correctly.The first file we will look at in this package will be main_frame.py , which creates the main application window.
 
 <details>
-<summary>On Ukraine language</summary>
+<summary>Ukrainian version</summary>
 Розглянувши основну схему проекту, тепер ви можете зрозуміти, для чого потрібен кожен пакет і модулі в них.
 Почнемо з пакету frames, який містить усі файли, пов’язані з вікнами програми, і функціями, які допомагають правильно керувати кнопками. Першим файлом, який ми розглянемо в цьому пакеті, буде main_frame.py, який створює головне вікно програми.
 </details>
@@ -242,6 +245,8 @@ The file buttom_frame.py contains all the functions and logic for creating and m
 
 ## Modules that we need for buttom frame
 
+Now we can look at the description of the modules and why I imported them.
+
 <details>
 <summary>Modules</summary>
 
@@ -284,6 +289,9 @@ The file buttom_frame.py contains all the functions and logic for creating and m
 
 <details>
 <summary>Adding songs</summary>
+
+The first time I sat down to make a project, the most basic question was how to load music from a computer into the project. 
+In this part of the code description, you can see a complete description of this question.
 
 ```python
 
@@ -329,6 +337,71 @@ def open_songs():
 
 ```
 </details>
+
+
+## Deleting song from music player
+
+If you were to ask me which part of the project was the most difficult, I would say without hesitation that it was the song removal function.
+
+In the first version of this function, I encountered a problem that all buttons were only passed the same song title, regardless of which button was pressed. I searched for a solution for several days and finally realized that the best option would be to use lambda functions for each button. This allowed me to determine exactly which button was pressed and remove the desired song accordingly.
+
+Below you can see the complete solution to this problem.
+
+<details>
+<summary>Ukrainian version</summary>
+Якщо б мене запитали, яка частина проєкту була найскладнішою, я б без вагань відповів, що це функція видалення пісень.
+
+У першій версії цієї функції я зіткнувся з проблемою , що для всіх кнопок передавалася лише одна й та сама назва пісні, незалежно від того, яку саме кнопку натискали. Я шукав рішення кілька днів і, зрештою, зрозумів, що найкращим варіантом буде використання lambda-функцій для кожної кнопки. Це дозволило мені точно визначати, на яку саме кнопку натиснули, і відповідно видаляти потрібну пісню.
+
+Нижче ви можете побачити повне рішення цієї задачі.
+</details>
+
+<details>
+<summary>Dliting songs</summary>
+
+```python
+# List for manage what song need to del
+# Ліст для того , щоб контролювати яку пісню треба видаляти
+check_del = [False]
+
+# A function that is immediately added for all buttons in the list_sons list; the name_of_button parameter contains the name of the button that was clicked
+# Функція, яка відразу додається для всіх кнопок у списку list_sons, у параметрі name_of_button лежить назва кнопки на яку натиснули
+def change_name_button(name_of_button):
+    # Checking whether you clicked on the delete songs button
+    # Перевіряємо чи натиснули на кнопку видалення пісень
+    if check_del[0] == True:      
+        # We go through the list of buttons with the names of songs to find out which one was clicked
+        # Перебираємо всі кнопки з назвами пісень, та перевіряємо чи текуща кнопка совпадает с кнопкой которую нажали, та якщо так, то видаляємо її
+        for button in list_for_button:
+            # If the song you searched for coincides with the one you clicked on, then delete it
+            # Якщо пісня яку перебирали збіглася з тією на яку натиснули, то видаляємо її
+            if button._text == name_of_button:
+                # If we find the right button, destroy it
+                # Якщо нагшли на яку кнопку настиснули , то видаляємо її
+                button.destroy()
+                # Also delete a song from the list_songs
+                # Також видаляємо пісню із списку де зьерігаються усі пісні, щоб її не можна було програти
+                list_songs.remove(name_of_button + ".mp3")
+                # Also delete the button from the list_for_button
+                # Видаляємо кнопку із списка де зберігаються усі кнопки
+                list_for_button.remove(button)
+                # Transfer the click of the delete button False to the tracking list, so that the next song can be deleted only by clicking on the button
+                # Передаємо у список відстеження натискання кнопки видалення False, щоб наступну пісню можна було видалити лише після натискання на кнопку
+                check_del[0] = False
+            # If already we don't have any buttons in list , clear all list
+            # якщо в списку де зберігаються усі кнопки пустий, то очищаємо список
+            elif len(list_songs) < 1:
+                list_for_button.clear()
+                
+# if check_del is False, it means the delete button was not pressed
+# якщо в check_del лежить False то значить кнопку видалення не натиснули
+def delete_song():
+    # transmit True to say that the button was pressed
+    # передаємо True щоб сказати що натиснули на кнопку
+    check_del[0] = True
+```
+</details>
+
 
 
 
