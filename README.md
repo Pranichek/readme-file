@@ -241,6 +241,7 @@ After viewing the code of the main window, let's go to the file where we create 
 The file buttom_frame.py contains all the functions and logic for creating and managing buttons in the bottom frame of the application. 
 
 1. Import all modules that we need for buttom frame
+
 <details>
 <!-- <summary>Modules</summary> -->
 
