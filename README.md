@@ -280,6 +280,56 @@ The file buttom_frame.py contains all the functions and logic for creating and m
 
 </details>
 
+## Add songs to the project
+
+<details>
+<summary>Adding songs</summary>
+
+```python
+
+# A function wich load songs from your computer to music player
+# Функціія яка завантажує музику з комп'ютера до музикального плеєра
+def open_songs():
+    # Choise from wich directory songs will loads to project
+    # Запитуємо у користувача із якої дирикторії будемо завантажувати музику
+    path = filedialog.askdirectory()
+    # Checking that the user does not select an empty directory
+    # Перевірка на те , щоб користувач не вибрав пусту директорію
+    if path != None:
+        name = ""
+        # Chdir - the command changes the current working directory to the one specified in the path variable so that pygame can play music by name
+        # Chdir - яка команда змінює поточну робочу директорію на вказану в змінній path , щоб pygame міг програвати музику за назвою
+        os.chdir(path)
+        # os.listdir - a function in Python that returns a list containing the names of the entries in the directory given by path.
+        #listdir - команда повертає список файлів та папок, що знаходяться у вказаній директорії path
+        songs = os.listdir(path)
+        # We go through all the files and check that they have the mp3 extension
+        #Перебираємо усі файли , та перевіряємо щоб вони були із розширенням mp3
+        for song in songs: 
+            if song.endswith(".mp3"):
+                # If this is the case, then split the file into name and extension
+                # Якщо це так, то розбиваємо файл на ім'я та розширення
+                name , file = song.split(".mp3")
+                # Create a button with song name ,  - so that the button contains the names of the songs in order, and not just the last one
+                # Створення кнопки з назвою пісні , lambda - щоб кнопка містила назви пісень по порядку, а не лише останню
+                button = ctk.CTkButton(master= frame_treks , text = name , command=lambda name_of_button = name:change_name_button(name_of_button= name_of_button))
+
+                # Add button to the list of buttons
+                # Додаємо кнопку до списку із кнопками
+                list_for_button.append(button)
+
+                # Add song to the list for songs
+                # Додаємо пісню до списку пісень
+                list_songs.append(song)
+
+            # Pack buttons in frame_treks to display them on the screen
+            # Розташовуємо кнопки із піснями за допомогою циклу, та робимо відступи у 10 пікселів
+            for song in list_for_button:
+                song.pack(pady = 10)
+
+```
+</details>
+
 
 
 
