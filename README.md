@@ -22,14 +22,13 @@
 # Project Scheme  
 [Scheme of project](#scheme)
 
-## Package Description  
-[Package description](#package_description)
+# Package Description  
+-   [Package description](#package_description)
+    - [Frame package](#frame_package)
+        -[File main_frame.py](#main_frame.py)
 
-### Frame Package  
-[Frame package](#frame_package)
 
-#### File: `main_frame.py`  
-[File main_frame.py](#main_frame.py)
+
 
 
 
