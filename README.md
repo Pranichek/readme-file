@@ -18,7 +18,7 @@
 
 [Scheme of project](#scheme)
 
-- [Package description](#package_description)
+[Package description](#package_description)
     -   [File buttom_frame.py](#buttom_frame.py)
 
 
