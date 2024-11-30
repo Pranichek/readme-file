@@ -242,7 +242,7 @@ The file buttom_frame.py contains all the functions and logic for creating and m
 
 1. Import all modules that we need for buttom frame
 <details>
-<summary>Modules</summary>
+<!-- <summary>Modules</summary> -->
 
     ```python
         # Import module pygame , that can play music
