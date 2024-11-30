@@ -27,6 +27,12 @@
     - [Frame package](#frame_package)
         -   [File main_frame.py](#main_frame.py)
     - [File buttom_frame.py](#buttom_frame.py)
+        -   [Module description in file button_frame.py](#button_frame_modules)
+        -   [Function wich load songs to project](#load_songs)
+        -   [Function wich delete songs](#delete_songs)
+        -   [Functions for editing volume][#"edit_volume"]
+        -   [Function that play random songs](#random_songs)
+        -   [Crate buttons for buttom panel](#buttons_for_buttom_panel")
 
 
 
@@ -271,13 +277,17 @@ The buttom_frame.py file is a significant part of the music player. It implement
 Файл buttom_frame.py є значною частиною музичного плеєра. У ньому реалізовані функції для завантаження, відтворення, зміни гучності та випадкового відтворення пісень. Він дозволяє користувачеві додавати пісні в плейлист з вибраної директорії, відображати кнопки з назвами пісень на екрані, а також видаляти пісні зі списку. Функції регулювання гучності (збільшення та зменшення) також включені в інтерфейс. Вбудована можливість відтворення випадкових пісень з урахуванням того, щоб та сама пісня не програвалася двічі поспіль. Також є функції для паузи та продовження відтворення музики.Нижче буде написане повний опис кожної функції у цьому файлі.
 </details>
 
+[⬆️Table of contents](#articles) 
 
-## Modules that we need for buttom frame
+
+<a name="button_frame_modules"><h2>Modules that we need for buttom frame</h2></a>
 
 Now we can look at the description of the modules and why I imported them.
 
 <details>
-<summary>Modules</summary>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Зараз ми можемо побачити які імпоруються модулі у цьому файлі.
+</details>
 
 ```python
     # Import module pygame , that can play music
@@ -312,18 +322,20 @@ Now we can look at the description of the modules and why I imported them.
     from .side_frame import event_pause , list_check_stop , label_for_show_name, list_flipping_song  , list_for_button, what_event
 ```
 
-</details>
+[⬆️Table of contents](#articles) 
 
-## Add songs to the project
+<a name="load_songs"><h2>Load songs to the project</h2></a>
 
-The first time I sat down to make a project, the most basic question was how to load music from a computer into the project. 
+The first time I sat down to make a project, the most hard question was how to load music from a computer into the project. 
 In this part of the code description, you can see a complete description of this question.
 
 <details>
-<summary>Adding songs code</summary>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Коли я вперше сів за проект, найскладнішим питанням було, як завантажити в проект музику з комп’ютера.
+У цій частині опису коду ви можете побачити повний опис цього питання.
+</details>
 
 ```python
-
 # A function wich load songs from your computer to music player
 # Функціія яка завантажує музику з комп'ютера до музикального плеєра
 def open_songs():
@@ -365,10 +377,11 @@ def open_songs():
                 song.pack(pady = 10)
 
 ```
-</details>
+
+[⬆️Table of contents](#articles) 
 
 
-## Deleting song from music player
+<a name="delete_songs"><h2>Deleting song from music player</h2></a>
 
 If you were to ask me which part of the project was the most difficult, I would say without hesitation that it was the song removal function.
 
@@ -384,9 +397,6 @@ Below you can see the complete solution to this problem.
 
 Нижче ви можете побачити повне рішення цієї задачі.
 </details>
-
-<details>
-<summary>Deleting songs code</summary>
 
 ```python
 # List for manage what song need to del
@@ -429,10 +439,11 @@ def delete_song():
     # передаємо True щоб сказати що натиснули на кнопку
     check_del[0] = True
 ```
-</details>
+
+[⬆️Table of contents](#articles) 
 
 
-## Volume Editing
+<a name="edit_volume"><h2>Volume Editing</h2></a>
 
 The volume functions implement an intuitive approach to controlling the sound level.
 First, we get the current volume level and store it in the list_for_volume so that we can change this value in the future.
@@ -454,9 +465,6 @@ This approach provides smooth sound adjustment and protection against incorrect 
 
 Цей підхід забезпечує плавне регулювання звуку та захист від некоректних значень гучності
  </details>
-
- <details>
- <summary>Volume editing code</summary>
 
 ```python
 # We get what the current volume of the sound is
@@ -503,9 +511,10 @@ def minus_volume():
         pygame.mixer.music.set_volume(list_for_volume[0])
 ```
 
- </details>
+[⬆️Table of contents](#articles) 
 
- ## Random play songs
+
+<a name="random_songs"><h2>PLay random songs</h2></a>
 
  Now we can look at the random song playback function. In my opinion, this part of the file is perhaps the most difficult in this file. It selects a song that has not yet been played and plays it, changing the song name on the screen. If the song was paused, the function unpauses and continues playing from the place where it was stopped. The function also takes into account the possibility of skipping songs or returning to the previous one through the corresponding interface buttons. All songs that have already been played are added to the list to avoid repetitions. You can see the full code description below
 
@@ -720,7 +729,10 @@ def random_music_theread():
  ```
  </details>
 
- ## Create Buttons for buttom panel
+ [⬆️Table of contents](#articles) 
+
+
+<a name="buttons_for_buttom_panel"><h2>Create Buttons for buttom panel</h2></a>
 
 The last part of this file is responsible for creating and placing the buttons in the bottom row of the interface, located in the frame_buttom. Each button performs a specific action, such as adding or removing a song, shuffling a song, or adjusting the volume.
 Thus, the use of the program becomes clear, and controlling songs, playback, and sound settings is more convenient with the program interface.
