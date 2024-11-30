@@ -288,11 +288,11 @@ Now we can look at the description of the modules and why I imported them.
 
 ## Add songs to the project
 
-<details>
-<summary>Adding songs</summary>
-
 The first time I sat down to make a project, the most basic question was how to load music from a computer into the project. 
 In this part of the code description, you can see a complete description of this question.
+
+<details>
+<summary>Adding songs</summary>
 
 ```python
 
