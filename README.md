@@ -24,6 +24,7 @@
 
 # Package Description  
 -   [Package description](#package_description)
+    - [Main __init__.py of package modules](#main_init)
     - [Frame package](#frame_package)
         -   [File __init__.py](#init_frames)
         -   [File main_frame.py](#main_frame.py)
@@ -207,6 +208,25 @@ graph TD;
 ```
 
 <a name="package_description"><h1>Package description</h1></a>
+
+<a name="main_init"><h2>__init__.py</h2></a>
+This file initializes all modules, functions, classes, and variables from the frames package. 
+This approach is convenient for accessing all elements of the package.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Цей файл ініціалізує всі модулі, функції, класи та змінні з пакету frames.
+Такий підхід зручний,для того щоб отримати доступ до всіх елементів пакета.
+</details>
+
+```python
+# Imports all from frames package
+# Імпортуємо усе із пакету frames
+from .frames import *
+
+```
+
+
 
 <a name="frame_package"><h1>Frame package</h1></a>
 
