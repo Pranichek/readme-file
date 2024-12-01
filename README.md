@@ -227,8 +227,7 @@ from .frames import *
 ```
 
 
-
-<a name="frame_package"><h1>Frame package</h1></a>
+<a name="frame_package"><h1>Frames package</h1></a>
 
 After looking at the main scheme of the project, you can now understand why each package and the modules in them are needed.
 Let's start with package frames , which contains all the files associated with application frames, and functions that help manage buttons correctly.The first file we will look at in this package will be main_frame.py , which creates the main application window.
@@ -1562,7 +1561,7 @@ label_for_show_name.place(x = 270, y = 30)
 [⬆️Table of contents](#articles) 
 
 
-<a name="json_package"><h1>json_functions</h1></a>
+<a name="json_package"><h1>json_functions package</h1></a>
 
 The json_functions package contains functions that help with working with JSON files and paths to resources, 
 including images. It allows you to conveniently obtain paths to images used in the application interface, 
@@ -1663,7 +1662,7 @@ def read_json(filename:str):
 
 [⬆️Table of contents](#articles) 
 
-<a name="load_images"><h1>Load images package</h1></a>
+<a name="load_images"><h1>load_images package</h1></a>
 
 The load_images package creates and loads images for buttons in the GUI using the customtkinter and PIL libraries. 
 Using the read_images function with the json_functions package, it retrieves the image paths, opens them, 
