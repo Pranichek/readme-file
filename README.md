@@ -53,6 +53,8 @@
         -   [File __init__.py](#init_load_images)
         -   [File get_images.py](#get_images)
 
+# Sources of information
+[links to sources of information](#links_of_informations)
 
 
 
@@ -1733,6 +1735,28 @@ image_mix_songs = ctk.CTkImage(Image.open(read_images("mix_songs_button")), size
 image_sound_up = ctk.CTkImage(Image.open(read_images("sound_up_button")), size = (15 , 15))
 image_sound_down = ctk.CTkImage(Image.open(read_images("sound_down_button")), size = (15 , 15))
 ```
+
+
+<a name="links_of_informations"><h1>links to sources of information</h1></a>
+
+In the process of development there are a lot of collapsible parts that were lost, I was using the available resources:
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+У процесі розробки та вирішення складнощів, що виникали, я використовував наступні ресурси:
+</details>
+
+1. [Stack Overflow](https://stackoverflow.com) - to look for clues about the recent treats that were written in me / Для пошуку відповідей на дивні помилки які в мене виникали
+2. [Документація Pygame](https://www.pygame.org/docs) - to learn the pygame.mixer module / для вивчення модуля pygame.mixer
+3. [Документація CustomTkinter](https://customtkinter.tomschimansky.com/documentation) - to learn mpre about the module customtkinter / для вивченн більшої інформації о бібліотеці customtkinter
+4. [Офіційна документація Python](https://docs.python.org/) - to learn the threading module / для вивчення threading бібліотеки
+5. [YouTube](https://youtube.com) - to view educational videos and examples of implementing similar projects / для перегляду навчальних відео та прикладів реалізації подібних проєктів
+
+
+[⬆️Table of contents](#articles) 
+
+
+
 
 
  
