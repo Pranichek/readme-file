@@ -36,6 +36,7 @@
         -   [File frame_for_songs.py](#frame_for_songs.py)
         -   [File side_frame.py](#side_frame.py)
             -   [Module description in file side_frame.py](#modules_side_frame)
+            -   [Function wich plays music in turn](#queu_music)
 
 
 
