@@ -25,6 +25,7 @@
 # Package Description  
 -   [Package description](#package_description)
     - [Frame package](#frame_package)
+        -   [File __init__.py](#init_frames)
         -   [File main_frame.py](#main_frame.py)
         -   [File buttom_frame.py](#buttom_frame.py)
             -   [Module description in file button_frame.py](#button_frame_modules)
@@ -211,6 +212,34 @@ Let's start with package frames , which contains all the files associated with a
 Почнемо з пакету frames, який містить усі файли, пов’язані з вікнами програми, і функціями, які допомагають правильно керувати кнопками. Першим файлом, який ми розглянемо в цьому пакеті, буде main_frame.py, який створює головне вікно програми.
 </details>
 
+<a name="init_frames"><h1>__init__.py</h1></a>
+
+Before we start dissecting each file in this package, let's take a look at the __init__.py file.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Перед тим як почнемо розбирати кожен файл у цьому пакеті, давайте розглянемо файл __init__.py
+</details>
+
+```python
+# Import the main window of the app application from the main_frame module
+# Імпортуємо основне вікно програми app з модуля main_frame
+from .main_frame import app
+# Import the frame for the bottom of the interface (frame_buttom) from the buttom_frame module
+# Імпортуємо фрейм для нижньої частини інтерфейсу з модуля buttom_frame
+from .buttom_frame import frame_buttom
+# Import the frame for songs from the frame_for_songs module
+# Імпортуємо фрейм для пісень з модуля frame_for_songs
+from .frame_for_songs import frame_treks
+# Import all elements from the side_frame module
+# Імпортуємо всі елементи з модуля side_frame
+from .side_frame import *
+
+```
+
+[⬆️Table of contents](#articles)
+
+
 <a name="main_frame.py"><h1>main_frame.py</h1></a>
 The main_frame.py file is created to initialize the main window of the program and place the main interface elements on it. I can also note that I have specifically allocated this file for the code to improve the structure of the project, making it clearer and easier to maintain. The file is solely responsible for creating the main window of the program, leaving the other functions of the program in separate files.
 
@@ -296,7 +325,6 @@ There are also functions for pausing and continuing music playback. Below is a f
 </details>
 
 [⬆️Table of contents](#articles) 
-
 
 <a name="button_frame_modules"><h2>Modules that we need for buttom frame</h2></a>
 
