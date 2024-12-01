@@ -33,6 +33,7 @@
             -   [Functions for editing volume](#edit_volume)
             -   [Function that play random songs](#random_songs)
             -   [Create buttons for buttom panel](#buttons_buttom_panel)
+        -   [File frame_for_songs](#frame_for_songs.py)
 
 
 
@@ -270,11 +271,19 @@ After viewing the code of the main window, let's go to the file where we create 
 
 <a name="buttom_frame.py"><h1>buttom_frame.py</h1></a>
 
-The buttom_frame.py file is a significant part of the music player. It implements functions for loading, playing, changing the volume, and randomizing songs. It allows the user to add songs to a playlist from a selected directory, display buttons with song names on the screen, and remove songs from the list. Volume control functions (increase and decrease) are also included in the interface. The ability to play random songs is built in, taking into account that the same song is not played twice in a row. There are also functions for pausing and continuing music playback. Below is a full description of each function in this file.
+The buttom_frame.py file is a significant part of the music player. It implements functions for loading, playing, 
+changing the volume, and randomizing songs. It allows the user to add songs to a playlist from a selected directory, 
+display buttons with song names on the screen, and remove songs from the list. Volume control functions (increase and decrease) 
+are also included in the interface. The ability to play random songs is built in, taking into account that the same song is not played twice in a row. 
+There are also functions for pausing and continuing music playback. Below is a full description of each function in this file.
 
 <details>
 <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
-Файл buttom_frame.py є значною частиною музичного плеєра. У ньому реалізовані функції для завантаження, відтворення, зміни гучності та випадкового відтворення пісень. Він дозволяє користувачеві додавати пісні в плейлист з вибраної директорії, відображати кнопки з назвами пісень на екрані, а також видаляти пісні зі списку. Функції регулювання гучності (збільшення та зменшення) також включені в інтерфейс. Вбудована можливість відтворення випадкових пісень з урахуванням того, щоб та сама пісня не програвалася двічі поспіль. Також є функції для паузи та продовження відтворення музики.Нижче буде написане повний опис кожної функції у цьому файлі.
+Файл buttom_frame.py є значною частиною музичного плеєра. У ньому реалізовані функції для завантаження, відтворення, 
+зміни гучності та випадкового відтворення пісень. Він дозволяє користувачеві додавати пісні в плейлист з вибраної директорії, 
+відображати кнопки з назвами пісень на екрані, а також видаляти пісні зі списку. Функції регулювання гучності (збільшення та зменшення) 
+також включені в інтерфейс. Вбудована можливість відтворення випадкових пісень з урахуванням того, щоб та сама пісня не програвалася
+ двічі поспіль. Також є функції для паузи та продовження відтворення музики.Нижче буде написане повний опис кожної функції у цьому файлі.
 </details>
 
 [⬆️Table of contents](#articles) 
@@ -854,6 +863,50 @@ button_sound_down.grid(row = 0 , column = 4)
 </details>
 
  [⬆️Table of contents](#articles) 
+
+ <a name="frame_for_songs.py"><h1>frame_for_songs.py</h1></a>
+
+ The file frame_for_songs.py is an important part of the music player. It creates and displays a 
+ frame that contains buttons with the names of the loaded songs. This file is responsible for organizing
+ the interface for interacting with the user's playlist.
+Below is a complete description of each element of this file.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Файл frame_for_songs.py є важливою частиною музичного плеєра. У ньому створюється та відображається фрейм, 
+який містить кнопки з назвами завантажених пісень. Цей файл відповідає за організацію інтерфейсу для взаємодії з плейлистом користувача. 
+Нижче наведений повний опис кожного елемента цього файлу.
+</details>
+
+```python
+# Import module that can create Dekstop programs 
+# Імпортуємо необхідний модуль для створення Dekstop програм
+import customtkinter as ctk
+# Import the main frame in the ptoject , where we place all another frames with objects
+# Імпортуємо головний фрейм у проєкті, де розташовуємо усі інші фрейми із об'єктами
+from .main_frame import app
+
+# Create list for loaded songs
+# Створюємо список де зберігаються усі завантажені пісні 
+list_songs = []
+
+
+# Create frame where place buttons with name songs
+# Створюємо фрейм де будуть розташовуватися кнопки із назвами пісень
+frame_treks = ctk.CTkScrollableFrame(app, 
+                           width = 200, 
+                           height = 318 , 
+                           corner_radius = 20 , 
+                           border_color= "black", 
+                           border_width= 4 , 
+                           fg_color= "#bdbdbd")
+# Place it in the main frame
+# Розташовуємо його на головному вікні
+frame_treks.place(x = 14 , y = 15)
+```
+
+ [⬆️Table of contents](#articles) 
+
 
 
 
