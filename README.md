@@ -39,6 +39,8 @@
             -   [Function wich plays music in turn](#queu_music)
             -   [Function wich skip song to the next](#"next_music)
             -   [Function wich skip song to the previous](#prev_music)
+            -   [Function wich pause the music](#pause_music)
+            -   [Function wich stop the music](#stop_music)
 
 
 
@@ -1286,6 +1288,65 @@ def prev_song():
 ```
 
 [⬆️Table of contents](#articles) 
+
+<a name="pause_music"><h2>Pause music</h2></a>
+
+The pause_music function is designed to pause a song in a music player. 
+It checks if there is a current pause state and pauses or unpauses the song accordingly.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Функція pause_music призначена для ставлення пісні на паузу в програмі для програвання музики. 
+Вона перевіряє, чи є поточний стан паузи, і відповідно ставить або знімає паузу з пісні.
+</details>
+
+```python
+# Create a function that pauses the song
+# Створюємо функцію яка ставить на паузу пісню
+def pause_music():
+    #перевіряємо чи пауза,якщо знаходиться True означає що пауза не поставлена
+    #check if a pause is set, if True is found it means that a pause is not set
+    if event_pause.is_set(): 
+        #if pause is pressed then we set false in event_pause and say that there is a pause now
+        #якщо натиснули на паузу, то ставимо false в event_pause і кажемо, що зараз пауза
+        event_pause.clear()  
+        # Pause the music
+        # Ставимо пісню на паузу
+        pygame.mixer.music.pause() 
+```
+
+[⬆️Table of contents](#articles) 
+
+
+<a name="stop_music"><h2>Stop music</h2></a>
+
+The stop_music function stops the current song if it is not paused. It first checks if pause is enabled,
+if not, the song is stopped, and a value of 1 is added to the list_check_stop to track the stop.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Функція stop_music зупиняє поточну пісню, якщо вона не перебуває на паузі. 
+Спочатку перевіряється, чи активована пауза, якщо пауза не встановлена, пісня зупиняється, 
+а в список list_check_stop додається значення 1 для відстеження зупинки.
+</details>
+
+```python
+# Create a function that stops the song
+# Створюємо функцію яка зупиняє пісню 
+def stop_music():
+    # Check if a pause is set, if it is True it means that a pause is not set
+    # Перевіряємо чи пауза, єсії знаходиться True означає що пауза не поставлена
+    if event_pause.is_set():
+        # Stop the music
+        # Зупиняємо пісню
+        pygame.mixer.music.stop()
+        #add 1 to the list so we can track whether a pause has been set
+        #додаємо 1 до списку щоб могли відстежувати поставлена ​​пауза
+        list_check_stop[0] += 1
+```
+
+[⬆️Table of contents](#articles) 
+
 
 
 
