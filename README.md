@@ -37,6 +37,8 @@
         -   [File side_frame.py](#side_frame.py)
             -   [Module description in file side_frame.py](#modules_side_frame)
             -   [Function wich plays music in turn](#queu_music)
+            -   [Function wich skip song to the next](#"next_music)
+            -   [Function wich skip song to the previous](#prev_music)
 
 
 
@@ -461,24 +463,21 @@ def delete_song():
 
 The volume functions implement an intuitive approach to controlling the sound level.
 First, we get the current volume level and store it in the list_for_volume so that we can change this value in the future.
-
 The add_volume function increases the volume by 0.1 and applies the new value. If the level exceeds the maximum allowable volume, it is automatically set to 1.
+The minus_volume function does the same thing, but decreases the volume by 0.1. 
+If the level falls below the minimum value, it is set to 0 to avoid incorrect player operation.
 
-The minus_volume function does the same thing, but decreases the volume by 0.1. If the level falls below the minimum value, it is set to 0 to avoid incorrect player operation.
 
-This approach provides smooth sound adjustment and protection against incorrect volume values
 
  <details>
  <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 У функціях зміни гучності реалізовано інтуїтивно зрозумілий підхід для управління рівнем звуку.
 Спочатку ми отримуємо поточний рівень гучності  і зберігаємо його в список list_for_volume, щоб мати можливість змінювати це значення в майбутньому.
-
 Функція add_volume збільшує гучність на 0.1 і застосовує нове значення. Якщо рівень перевищує максимальну допустиму гучність, він автоматично встановлюється на 1.
+Функція minus_volume діє аналогічно, але зменшує гучність на 0.1. 
+Якщо рівень падає нижче мінімального значення, він встановлюється на 0, щоб уникнути некоректної роботи програвача.
 
-Функція minus_volume діє аналогічно, але зменшує гучність на 0.1. Якщо рівень падає нижче мінімального значення, він встановлюється на 0, щоб уникнути некоректної роботи програвача.
-
-Цей підхід забезпечує плавне регулювання звуку та захист від некоректних значень гучності
- </details>
+</details>
 
 ```python
 # We get what the current volume of the sound is
@@ -530,12 +529,21 @@ def minus_volume():
 
 <a name="random_songs"><h2>PLay random songs</h2></a>
 
- Now we can look at the random song playback function. In my opinion, this part of the file is perhaps the most difficult in this file. It selects a song that has not yet been played and plays it, changing the song name on the screen. If the song was paused, the function unpauses and continues playing from the place where it was stopped. The function also takes into account the possibility of skipping songs or returning to the previous one through the corresponding interface buttons. All songs that have already been played are added to the list to avoid repetitions. You can see the full code description below
+ Now we can look at the random song playback function. In my opinion, this part of the file is perhaps the most difficult
+  in this file. It selects a song that has not yet been played and plays it, changing the song name on the screen. 
+  If the song was paused, the function unpauses and continues playing from the place where it was stopped. The function 
+  also takes into account the possibility of skipping songs or returning to the previous one through the corresponding 
+  interface buttons. All songs that have already been played are added to the list to avoid repetitions. 
+  You can see the full code description below
 
  <details>
  <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 
- Тепер можемо подивитися функцію програвання рандомних пісень.На мою думку ця частина файлу є чи не найтяжчей у цьому файлі.Вона вибирає пісню, яку ще не грали, і відтворює її, змінюючи назву пісні на екрані. Якщо пісня була поставлена на паузу, функція знімає паузу і продовжує відтворення з того місця, де було зупинено. Функція також враховує можливість пропуску пісень або повернення до попередньої через відповідні кнопки інтерфейсу. Всі пісні, що були вже програні, додаються до списку, щоб уникнути повторів. Повний опис коду можете продивитися нижче
+ Тепер можемо подивитися функцію програвання рандомних пісень.На мою думку ця частина файлу є чи не найтяжчей у цьому файлі.
+ Вона вибирає пісню, яку ще не грали, і відтворює її, змінюючи назву пісні на екрані. Якщо пісня була поставлена на паузу, 
+ функція знімає паузу і продовжує відтворення з того місця, де було зупинено. Функція також враховує можливість пропуску пісень
+ або повернення до попередньої через відповідні кнопки інтерфейсу. Всі пісні, що були вже програні, додаються до списку, щоб 
+ уникнути повторів. Повний опис коду можете продивитися нижче
  </details>
 
 
@@ -933,7 +941,7 @@ connecting its various parts into a single, coherent system. What exactly is the
 яке зв’язує різні її частини в єдину, узгоджену систему.Який саме код знаходиться у цьому файлі , і його опис можна побачити нижче.
 </details>
 
-<a name="modules_side_frame"><h1>Modules that we need for side frame</h1></a>
+<a name="modules_side_frame"><h2>Modules that we need for side frame</h2></a>
 Of course, first let's analyze which modules are used in this file, and for what purpose.
 
 <details>
@@ -964,7 +972,7 @@ from threading import Thread , Event
 
 [⬆️Table of contents](#articles) 
 
-<a name="queu_music"><h1>Play music in turn</h1></a>
+<a name="queu_music"><h2>Play music in turn</h2></a>
 
 The play_song function is responsible for playing music in turn from the list. This function handles several modes, 
 for example, if the song was paused, it resumes playback from the moment it was stopped. When changing tracks, the 
@@ -1184,6 +1192,111 @@ def play_song():
 </details>
 
 [⬆️Table of contents](#articles) 
+
+
+<a name="next_music"><h2>Skip song forward</h2></a>
+
+The song forward function is used to quickly advance from the current song to the next song in a playlist. It 
+ensures that various music playback scenarios are handled correctly, including queue, random song order, and when a song is paused.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Функція перегортання пісень у перед використовується для швидкого перегортання поточної пісні 
+до наступної у плейлисті. Вона забезпечує правильну обробку різних сценаріїв програвання музики, 
+включаючи чергу, випадковий порядок пісень та випадок, коли пісня знаходиться на паузі.
+</details>
+
+```python
+# Function for fast-forwarding a song
+# Функція для перегортанння пісні уперед
+def next_song():
+    # Pass the value True to the list to check where the song should be flipped
+    # Передаємо у список для перевірки куди треба перегорнути пісню значення True
+    list_flipping_song[0] = True
+    # Unpause the song if it was paused
+    # Знімаємо пісню з паузи, якщо вона стояла
+    event_pause.set()
+    pygame.mixer.music.unpause()
+    # If the songs are currently playing in turn, then we do the code below
+    # Якщо зараз пісні грають по черзі , то робимо код нижче 
+    if what_event[0] == "queue" or what_event[0] != "random":
+        # If it is currently at stop, then we do nothing
+        # Якщо зараз стоїть стоп , то нічого не робимо
+        if label_for_show_name._text == "Stop":
+            # We reset the value in the list to zero to check where to scroll the songs - forward or backward
+            # Обнуляємо значення у списку для перевірки куди треба перегорнути пісні - вперед чи назад
+            list_flipping_song[0] = False
+            pass
+        # If there is no stop now, then we do the code below
+        # Якщо зараз немає стопу , то робимо код нижче
+        else: 
+            # If the user has never played music before (i.e. this is the first time they have started the program), then it starts playing songs one after the other
+            # Якщо користувач ніколи ще не запускав музику(тобто вперший раз запустив програму) , то запускає прогрвання пісень одна за одною
+            if list_flipping_song[0] == True and label_for_show_name._text == "Пісня ще не грає":
+                play_theread()
+                # Reset the value in the list to zero to check where to scroll the songs - forward or backward
+                # Обнуляємо значення у списку для перевірки куди треба перегорнути пісні - вперед чи назад
+                list_flipping_song[0] = False
+            # If user flipped the song to the first (i.e. it was the last one, and flipped to the first one)
+            # Якщо користувач перегорнули пісню на першу(тобто була остання , та перегорнули на першу) 
+            elif label_for_show_name._text + ".mp3" == list_songs[-1]:
+                # Then we start the stream of playing songs one after another
+                # Тоді запускаємо поток прогрвання пісень одна за одною
+                play_theread()
+                # Reset the value in the list to zero to check where to scroll the songs - forward or backward
+                # Обнуляємо значення у списку для перевірки куди треба перегорнути пісні - вперед чи назад
+                list_flipping_song[0] = False
+```
+
+[⬆️Table of contents](#articles) 
+
+<a name="prev_music"><h2>Go back to the previous song</h2></a>
+
+The prev_song function is used to skip back a song in a music player. It implements a mechanism for playing 
+songs in sequence and allows you to switch back after the last song in the queue has finished.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Функція prev_song використовується для перегортання пісні назад у програмі для програвання музики. 
+Вона реалізує механізм відтворення пісень по черзі і дає можливість перемикатися назад після завершення останньої пісні в черзі.
+</details>
+
+```python
+# Function to rewind songs
+# Функція для перегортання пісень назад
+def prev_song():
+    # Pass the value "Back" to the list so that we can understand that we need to rewind the song
+    # Передаємо значення "Back" у список , щоб можна було зрозуміти що треба перегорнути пісню назад
+    list_flipping_song[0] = "Back"
+    # If songs are currently being played in turn, then we do the code below
+    # Якщо зараз граються пісні по черзі, то робимо код нижче
+    if what_event[0] == "queue":
+        # Check that the last song is currently playing
+        # Перевіряємо щоб зараз грала остання пісня
+        if label_for_show_name._text + ".mp3" == list_songs[-1]:
+            # Check that the last song has finished playing
+            # Перевіряємо щоб остання пісня закінчила грати
+            if not pygame.mixer.music.get_busy():
+                # Restart the thread
+                # Запускаємо поток заново
+                play_theread()
+                # Pass the value "needback" to the list so that it is clear that the last song in the list has ended, and you can scroll back through the song
+                # Передаємо до списку значення "needback" щоб було зрозуміло що закінчилась остання пісні у списку, і можна було перегорнути пісню назад
+                previous_track[0] = "needback"
+```
+
+[⬆️Table of contents](#articles) 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
