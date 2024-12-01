@@ -41,6 +41,8 @@
             -   [Function wich skip song to the previous](#prev_music)
             -   [Function wich pause the music](#pause_music)
             -   [Function wich stop the music](#stop_music)
+            -   [Function wich create a Thread](#thread_queue)
+            -   [Creating side frames and label](#side_frame)
 
 
 
@@ -1335,15 +1337,172 @@ if not, the song is stopped, and a value of 1 is added to the list_check_stop to
 # Створюємо функцію яка зупиняє пісню 
 def stop_music():
     # Check if a pause is set, if it is True it means that a pause is not set
-    # Перевіряємо чи пауза, єсії знаходиться True означає що пауза не поставлена
+    # Перевіряємо чи пауза, якщо знаходиться True означає що пауза не поставлена
     if event_pause.is_set():
         # Stop the music
         # Зупиняємо пісню
         pygame.mixer.music.stop()
-        #add 1 to the list so we can track whether a pause has been set
-        #додаємо 1 до списку щоб могли відстежувати поставлена ​​пауза
+        # Аdd 1 to the list so we can track whether a pause has been set
+        # Додаємо 1 до списку щоб могли відстежувати поставлена ​​пауза
         list_check_stop[0] += 1
 ```
+
+[⬆️Table of contents](#articles)
+
+<a name="thread_queue"><h2>Start thread</h2></a>
+
+The play_theread function creates and starts a new thread to play songs one by one. The thread calls
+the play_song function, which is responsible for playing the song. Using threads avoids deadlocks 
+between the music playback functions and the customtkinter module loop, ensuring that the program works correctly without infinite loading.
+
+ <details>
+ <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Функція play_theread створює і запускає новий потік для програвання пісень по черзі. Потік викликає 
+функцію play_song, що відповідає за відтворення пісні. Використання потоків дозволяє уникнути взаємних
+блокувань між функціями програвання музики та циклом модуля customtkinter, забезпечуючи коректну роботу програми без нескінченної загрузки.
+ </details>
+
+```python
+ # Create a function to start a stream, with the function of playing songs one by one
+# Створюємо функція для запуску потока , із функцією програвання пісень по черзці
+def play_theread():
+    # Create a thread
+    # Створюємо поток
+    play = Thread(target = play_song)
+    # Start the thread
+    # Запускаємо цей поток
+    play.start()
+```
+
+[⬆️Table of contents](#articles)
+
+<a name="side_frame"><h2>Creating side frame</h2></a>
+
+
+In the last part of this file, we will analyze the code that creates a side frame with buttons for controlling 
+the music and a label for displaying the current song. There is also a label for displaying information about the current song.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+У останній частинні цього файлу , ми розберемо код  який створює бічний фрейм з кнопками для управління музикою т
+а лейблом для відображення поточної пісні.Також є лейбл для відображення інформації про поточну пісню.
+</details>
+
+<details>
+<summary><b>The code of creating side frame</b></summary>
+
+```python
+# Create a frame to place the side buttons
+# Створюємо фрейм , для розташування бокових кнопок
+frame_bar = ctk.CTkFrame(app, width = 169 , height = 298 , fg_color = "#4cb7ce")
+frame_bar.place(x = 268 , y = 83)
+
+
+# setting up columns and rows for arranging buttons on the sidebar
+# налаштування колонок і рядків для розміщення кнопок на бічній панелі
+frame_bar.columnconfigure(0 , weight= 1) # | vertical columns
+frame_bar.rowconfigure((0 , 1, 2, 3,), weight = 1) # - - - - -  horizontal columns
+
+# Create button "start play music" 
+# Створюємо кнопку "start play music"
+button_play = ctk.CTkButton(master= frame_bar ,
+                             text = "",
+                             width = 169 , 
+                             height = 60 , 
+                             fg_color= "#bdbdbd" , 
+                             border_color = "black", 
+                             corner_radius= 20 , 
+                             border_width= 4 , 
+                             image= image_play , 
+                             anchor = "center",
+                             command = play_theread)
+
+# Place the button in the first (0) row and in the first (0) column, with a bottom indent of 10 px
+# Розташовуємо кнопку у першому(0) рядку та у першій колонці(0) , з відступом сзнизу у 10 px
+button_play.grid(row = 0 , column = 0 , pady = (0 , 10))
+
+# Create button "skip music" 
+# Створюємо кнопку "skip music"
+button_next_song = ctk.CTkButton(master= frame_bar ,
+                                text= "" ,
+                                width = 61 , 
+                                height = 58, 
+                                fg_color= "#bdbdbd", 
+                                border_color = "black" ,
+                                corner_radius = 20, 
+                                border_width = 4 , 
+                                image=image_next_song , 
+                                anchor = "center",
+                                command= next_song
+                                )
+# Place the button in the second (1) row and in the first column (0), with a 10 px indent
+# Розташовуємо кнопку у другому(1) рядку та у першій колонці(0) , з відступом у 10 px
+button_next_song.grid(row = 1 , column = 0 , sticky = "w", pady = 10)
+
+# Create button "previous song" 
+# Створюємо кнопку "previous song"
+button_prev_song = ctk.CTkButton(master = frame_bar, 
+                                text= "" ,
+                                width = 61 , 
+                                height = 58, 
+                                fg_color= "#bdbdbd", 
+                                border_color = "black" , 
+                                corner_radius = 20, 
+                                border_width = 4, 
+                                image= image_prev_song, 
+                                anchor="center",
+                                command= prev_song
+                                )
+# Place the button in the second (1) row and in the first column (0), with a 10 px indent
+# Розташовуємо кнопку у другому(1) рядку та у першій колонці(0) , з відступом у 10 px
+button_prev_song.grid(row = 1 , column = 0 , sticky = "e", pady = 10)
+
+# Create button "pause song" 
+# Створюємо кнопку "pause song"
+button_pause = ctk.CTkButton(master = frame_bar , 
+                            text = "", 
+                            width = 169, 
+                            height = 60 , 
+                            fg_color= "#bdbdbd", 
+                            border_color = "black" , 
+                            corner_radius = 20, 
+                            border_width = 4, 
+                            image = image_pause , 
+                            anchor = "center",
+                            command = pause_music,
+                            )
+# Place the button in the third (2) row and in the first column (0), with a 10 px indent
+# Розташовуємо кнопку у третьому(2) рядку та у першій колонці(0) , з відступом  у 10 px
+button_pause.grid(row = 2 , column = 0 , pady = 10)
+
+# Create button "stop song" 
+# Створюємо кнопку "stop song"
+button_stop = ctk.CTkButton(master = frame_bar , 
+                            text = "", 
+                            width = 169 , 
+                            height = 60 , 
+                            fg_color= "#bdbdbd", 
+                            border_color = "black" , 
+                            corner_radius = 20, 
+                            border_width = 4, 
+                            image = image_stop , 
+                            anchor= "center", 
+                            command = stop_music
+                            )
+# Place the button in the fourth (3) row and the first (0) column, with a top indent of 10 pixels
+# Розташовуємо кнопку у четвертому(3) рядку та у першій колонці(0) , з відступом зверху у 10 пікселів
+button_stop.grid(row = 3 , column = 0 , pady = (10 , 0))
+
+# Create a label to display what music is playing now
+# Створюємо лейбл для відображення, яка музика зараз грає
+label_for_show_name = ctk.CTkLabel(master = app, text = "Пісня ще не грає" ,width = 160, height = 15 , font = ("Inter" , 16) , text_color = "#FFFFFF")
+# Place the label in the main frame
+# Розташовуємо лейбл у головному вікні
+label_for_show_name.place(x = 270, y = 30)
+
+```
+</details>
+
 
 [⬆️Table of contents](#articles) 
 
