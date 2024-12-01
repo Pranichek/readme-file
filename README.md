@@ -985,7 +985,7 @@ such as the end of the song, pausing, or switching.
 </details>
 
 <details>
-<summary>** The code of function "play music in turn" **</summary>
+<summary><b>The code of function "play music in turn"</b></summary>
 
 ```python
 # Creat a function to play music in turn
