@@ -47,7 +47,10 @@
     - [Json package](#json_package)
         -   [File __init__.py](#init_json)
         -   [Function wich get path to images](#read_images)
-        -   [Dunction wich get data from json files](#read_json)
+        -   [Function wich get data from json files](#read_json)
+    -   [Load images package](#load_images)
+        -   [File __init__.py](#init_load_images)
+        -   [File get_images.py](#get_images)
 
 
 
@@ -1638,8 +1641,82 @@ def read_json(filename:str):
         return json.load(file)
 ```
 
+[⬆️Table of contents](#articles) 
+
+<a name="load_images"><h1>Load images package</h1></a>
+
+The load_images package creates and loads images for buttons in the GUI using the customtkinter and PIL libraries. 
+Using the read_images function with the json_functions package, it retrieves the image paths, opens them, 
+provides dimensions, and converts them to a customtkinter-compatible format for further use in the application.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+У пакеті load_images створюється та завантажується зображення для кнопок у графічному інтерфейсі за допомогою
+бібліотек customtkinter і PIL. Використовуючи функцію read_images з пакетом json_functions,
+вона отримує шляхи до зображення, відкриває їх, надає розміри та перетворює у формат, сумісний із customtkinter, для подальшого використання в додатку.
+</details>
 
 [⬆️Table of contents](#articles) 
+
+
+<a name="init_load_images"><h2>__init__.py</h2></a>
+
+This code initializes all objects with images from the get_images  file.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Цей код ініціалізує всі об’єкти зображеннями з файлу get_images.
+</details>
+
+```python
+from .get_images import *
+```
+
+[⬆️Table of contents](#articles) 
+
+<a name="get_images"><h2>get_images.py</h2></a>
+
+The get_images.py file is responsible for creating and loading images for buttons in the application's graphical interface. 
+It uses the customtkinter and PIL libraries to process the images. The read_images function from the json_functions module 
+provides paths to image files. After that, the images are opened, scaled to the specified size, and converted to a 
+customtkinter-compatible format for integration into the interface. Each button receives a corresponding image, which makes the application's interface more interactive and convenient.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Файл get_images.py відповідає за створення та завантаження зображень для кнопок у графічному інтерфейсі програми. 
+Він використовує бібліотеки customtkinter і PIL для обробки зображень. Функція read_images із модуля json_functions 
+забезпечує отримання шляхів до файлів зображень. Після цього зображення відкриваються, масштабуються до заданих розмірів 
+і конвертуються у формат, сумісний із customtkinter, для інтеграції в інтерфейс. Кожна кнопка отримує відповідне зображення, що робить інтерфейс програми більш інтерактивним і зручним.
+</details>
+
+
+```python
+# Import the customtkinter module to load images for the buttons
+# Імпортуємо модуль customtkinter для того щоб завантажити зображення для кнопок
+import customtkinter as ctk
+# Import the PIL module to open images from the received paths, and convert the images to the image format for customtkinter
+# Імопортуємо модуль PIL для того щоб відкривати зображення по отриманим шляхам , та перетворити зображення в формат зображень для customtkinter
+from PIL import Image
+# Import the read_images function from the json_functions module to get the paths to the images
+# Імпортужмо функцію read_images з модуля json_functions, щоб отримати шляхи до зображень
+from ..json_functions import read_images
+
+# Create images for all buttons and set the size
+# Створюємо зображення для усіх кнопок , та задаємо потрібні розміри
+image_play = ctk.CTkImage(Image.open(read_images("play_button")) , size = (73 , 43))
+image_next_song = ctk.CTkImage(Image.open(read_images("next_song_button")) , size = (30 , 20))
+image_prev_song   = ctk.CTkImage(Image.open(read_images("prev_song_button")) , size = (30 ,20))
+image_pause = ctk.CTkImage(Image.open(read_images("pause_button")) , size= (46 , 46))
+image_stop = ctk.CTkImage(Image.open(read_images("stop_button")) , size = (42, 38))
+image_add_song = ctk.CTkImage(Image.open(read_images("add_song_button")), size = (15 , 15))
+image_del_song = ctk.CTkImage(Image.open(read_images("del_song_button")), size = (15 , 15))
+image_mix_songs = ctk.CTkImage(Image.open(read_images("mix_songs_button")), size= (15 , 15))
+image_sound_up = ctk.CTkImage(Image.open(read_images("sound_up_button")), size = (15 , 15))
+image_sound_down = ctk.CTkImage(Image.open(read_images("sound_down_button")), size = (15 , 15))
+```
+
+
+ 
 
 
 
