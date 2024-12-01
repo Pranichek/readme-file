@@ -33,7 +33,9 @@
             -   [Functions for editing volume](#edit_volume)
             -   [Function that play random songs](#random_songs)
             -   [Create buttons for buttom panel](#buttons_buttom_panel)
-        -   [File frame_for_songs](#frame_for_songs.py)
+        -   [File frame_for_songs.py](#frame_for_songs.py)
+        -   [File side_frame.py](#side_frame.py)
+            -   [Module description in file side_frame.py](#modules_side_frame)
 
 
 
@@ -273,7 +275,7 @@ After viewing the code of the main window, let's go to the file where we create 
 
 The buttom_frame.py file is a significant part of the music player. It implements functions for loading, playing, 
 changing the volume, and randomizing songs. It allows the user to add songs to a playlist from a selected directory, 
-display buttons with song names on the screen, and remove songs from the list. Volume control functions (increase and decrease) 
+display buttons with song names on the screen, and remove songs from the app. Volume control functions (increase and decrease) 
 are also included in the interface. The ability to play random songs is built in, taking into account that the same song is not played twice in a row. 
 There are also functions for pausing and continuing music playback. Below is a full description of each function in this file.
 
@@ -281,7 +283,7 @@ There are also functions for pausing and continuing music playback. Below is a f
 <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 Файл buttom_frame.py є значною частиною музичного плеєра. У ньому реалізовані функції для завантаження, відтворення, 
 зміни гучності та випадкового відтворення пісень. Він дозволяє користувачеві додавати пісні в плейлист з вибраної директорії, 
-відображати кнопки з назвами пісень на екрані, а також видаляти пісні зі списку. Функції регулювання гучності (збільшення та зменшення) 
+відображати кнопки з назвами пісень на екрані, а також видаляти пісні з програми. Функції регулювання гучності (збільшення та зменшення) 
 також включені в інтерфейс. Вбудована можливість відтворення випадкових пісень з урахуванням того, щоб та сама пісня не програвалася
  двічі поспіль. Також є функції для паузи та продовження відтворення музики.Нижче буде написане повний опис кожної функції у цьому файлі.
 </details>
@@ -392,19 +394,21 @@ def open_songs():
 
 <a name="delete_songs"><h2>Deleting song from music player</h2></a>
 
-If you were to ask me which part of the project was the most difficult, I would say without hesitation that it was the song removal function.
-
-In the first version of this function, I encountered a problem that all buttons were only passed the same song title, regardless of which button was pressed. I searched for a solution for several days and finally realized that the best option would be to use lambda functions for each button. This allowed me to determine exactly which button was pressed and remove the desired song accordingly.
-
-Below you can see the complete solution to this problem.
+If you were to ask me which part of the project was the most difficult, I
+would say without hesitation that it was the song removal function.
+In the first version of this function, I encountered a problem that all buttons were only 
+passed the same song title, regardless of which button was pressed. I searched for 
+a solution for several days and finally realized that the best option would be to use 
+lambda functions for each button. This allowed me to determine exactly which button was 
+pressed and remove the desired song accordingly.Below you can see the complete solution to this problem.
 
 <details>
 <summary>🇺🇦 Ukrainian version 🇺🇦</summary>
 Якщо б мене запитали, яка частина проєкту була найскладнішою, я б без вагань відповів, що це функція видалення пісень.
-
-У першій версії цієї функції я зіткнувся з проблемою , що для всіх кнопок передавалася лише одна й та сама назва пісні, незалежно від того, яку саме кнопку натискали. Я шукав рішення кілька днів і, зрештою, зрозумів, що найкращим варіантом буде використання lambda-функцій для кожної кнопки. Це дозволило мені точно визначати, на яку саме кнопку натиснули, і відповідно видаляти потрібну пісню.
-
-Нижче ви можете побачити повне рішення цієї задачі.
+У першій версії цієї функції я зіткнувся з проблемою , що для всіх кнопок передавалася лише одна й та сама назва пісні,
+незалежно від того, яку саме кнопку натискали. Я шукав рішення кілька днів і, зрештою, зрозумів, що найкращим варіантом буде 
+використання lambda-функцій для кожної кнопки. Це дозволило мені точно визначати, на яку саме кнопку натиснули, 
+і відповідно видаляти потрібну пісню. Нижче ви можете побачити повне рішення цієї задачі.
 </details>
 
 ```python
@@ -905,7 +909,67 @@ frame_treks = ctk.CTkScrollableFrame(app,
 frame_treks.place(x = 14 , y = 15)
 ```
 
- [⬆️Table of contents](#articles) 
+[⬆️Table of contents](#articles) 
+
+<a name="side_frame.py"><h1>side_frame.py</h1></a>
+
+The side_frame.py file is probably the one you’ve been working on the longest, and for good reason. 
+It’s responsible for the functionality that largely determines the convenience and versatility of the music player. 
+This file implements all the basic controls that add interactivity and make using the application truly comfortable.
+
+Here, you’ve probably spent the most time creating the logic that ensures the correct operation of the sidebar, its 
+integration with other interface components and the player as a whole. As a result, this file has become the heart of the program, 
+connecting its various parts into a single, coherent system. What exactly is the code in this file, and its description can be seen below.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Файл side_frame.py — це, мабуть, той, над яким ти працював найдовше, і не дарма. Він відповідає за функціонал, 
+який значною мірою визначає зручність і багатофункціональність  музичного плеєра. У цьому файлі реалізовані всі 
+основні елементи управління, які додають інтерактивності та роблять користування додатком справді комфортним.
+
+Тут ти, ймовірно, витратив найбільше часу на створення логіки, яка забезпечує коректну роботу бокової панелі, 
+її інтеграцію з іншими компонентами інтерфейсу та плеєра загалом. У результаті цей файл став серцем програми, 
+яке зв’язує різні її частини в єдину, узгоджену систему.Який саме код знаходиться у цьому файлі , і його опис можна побачити нижче.
+</details>
+
+<a name="modules_side_frame"><h1>Modules that we need for side frame</h1></a>
+Of course, first let's analyze which modules are used in this file, and for what purpose.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Звісно спочатку розберемося які модулі використовуються у цьому файлі, та для чого.
+</details>
+
+```python
+# Import module pygame , that can play music
+# Імпортуємо модуль pygame , який дозволяє програвати музику
+import pygame
+# Import module that can create Dekstop programs 
+# Імпортуємо необхідний модуль для створення Dekstop програм
+import customtkinter as ctk
+# Import main frame , where we places all another frames
+# Імпортуємо головний екран , на якому можемо розташовувати всі інші фрейми
+from .main_frame import app
+# Import images for buttons
+# Імпортуємо зображення для кнопок
+from ..load_images.get_images import image_next_song , image_prev_song , image_pause , image_stop, image_play
+# Import list of songs
+# Імпортуємо список у якому зьерігаються усі пісні
+from .frame_for_songs import list_songs
+# Import function that can creates thread 
+# Імпортуємо моудль який може створювати потоки 
+from threading import Thread , Event
+```
+
+[⬆️Table of contents](#articles) 
+
+
+
+
+
+
+
+
 
 
 
