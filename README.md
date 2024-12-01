@@ -54,14 +54,15 @@
         -   [File get_images.py](#get_images)
 
 # Sources of information
-[links to sources of information](#links_of_informations)
+[Links to sources of information](#links_of_informations)
 
 
 
 
 
-# Music PLayer
-<a name="headers"><h2>About project</h2></a>
+
+<a name="headers"><h1>Music PLayer</h1></a>
+
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
