@@ -44,6 +44,10 @@
             -   [Function wich stop the music](#stop_music)
             -   [Function wich create a Thread](#thread_queue)
             -   [Creating side frames and label](#side_frame)
+    - [Json package](#json_package)
+        -   [File __init__.py](#init_json)
+        -   [Function wich get path to images](#read_images)
+        -   [Dunction wich get data from json files](#read_json)
 
 
 
@@ -188,8 +192,8 @@ graph TD;
     load_images-->get_images.py;
     modules-->json_functions;
     json_functions-->json_functions_init["__init__.py"];
-    json_functions-->read_images.py;
-    json_functions-->read_json.py;
+    json_functions-->path_images.py;
+    json_functions-->json_reader.py;
     music_player-->static;
     static-->images;
     static-->config.json;
@@ -1533,6 +1537,116 @@ label_for_show_name.place(x = 270, y = 30)
 
 
 [⬆️Table of contents](#articles) 
+
+
+<a name="json_package"><h1>json_functions</h1></a>
+
+The json_functions package contains functions that help with working with JSON files and paths to resources, 
+including images. It allows you to conveniently obtain paths to images used in the application interface, 
+as well as read data from JSON files for further processing.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Пакет json_functions містить функції, що допомагають у роботі з файлами JSON та шляхами до ресурсів, зокрема зображень.
+Він дозволяє зручно отримувати шляхи до зображень, що використовуються в інтерфейсі програми, а також читати дані з JSON 
+файлів для подальшої обробки.
+</details>
+
+<a name="init_json"><h2>__init.py</h2></a>
+This code initializes the read_images function from the path_images module to get image paths and the 
+read_json function from the json_reader module to read data from JSON files.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Цей код ініціалізує функцію read_images з модуля path_images для отримання шляхів до зображень та функцію 
+read_json з модуля json_reader для читання даних із JSON файлів.
+</details>
+
+```python
+# Import the function to get the path to the image from the path_images file
+# Імпортуємо функцію отримання шляху до зобарження з файлу path_images
+from .path_images import read_images
+# Імпортуємо функцію, яка читає файл та повертає його вміст із файлу json_reader.py
+# Імпортуємо функцію яка читає файл та повертає його вміст з файлу json_reader.py
+from .json_reader import read_json
+```
+
+[⬆️Table of contents](#articles) 
+
+<a name="read_images"><h2>path_images.py</h2></a>
+
+One of the main functions of the json_functions package is read_images, it is located in the file path_images.py 
+and gets the absolute path to the image based on the passed image name. It helps to dynamically determine the
+ path to the image files stored in a specific project directory.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Одна з основних функцій пакету json_functions — це read_images,вона знаходиться у файлі path_images.py і отримує абсолютний
+шлях до зображення на основі переданої назви зображення. Вона допомагає динамічно визначати шлях до файлів зображень,
+що зберігаються в певній директорії проекту.
+</details>
+
+```python
+# Import the module for working with directories
+# Імпортуємо модуль для роботи із директоріями
+import os
+
+
+# Function that returns the path to the image file
+# Функція, яка повертає шлях до файлу зображення
+def read_images(name_image: str):
+   # Get the absolute path to the current file and dynamically pass the image name
+   # Отримаємо абсолютний шлях до поточного файлу і динамічно передаємо назву зображення
+   return os.path.abspath(__file__ + f"/../../../static/images/{name_image}.png")
+```
+
+[⬆️Table of contents](#articles) 
+
+<a name="read_json"><h2>json_reader.py</h2></a>
+
+Now we can go to the json_reader.py file which contains the read_json function which allows us to read the contents of JSON files
+and return it as a Python dictionary. This function is used to load the main window parameters
+which are stored in JSON format.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Тепер можемо перейти до файлу json_reader.py у якому знаходиться функція read_json, яка дозволяє зчитувати вміст JSON файлів 
+і повертати його у вигляді Python словника. Ця функція використовується для завантаження параметрів головного вікна, 
+що зберігаються у форматі JSON. 
+</details>
+
+```python
+# Import the module for working with directories
+# Імпортуємо модуль для роботи із директоріями
+import os 
+# Import the module for working with JSON files
+# Імпортуємо модуль для роботи з файлами JSON
+import json
+
+
+# Function that reads JSON file and returns its content
+# Функція, яка читає файл JSON і повертає його вміст
+def read_json(filename:str):
+    # Get the absolute path to the current file and dynamically pass the filename
+    # Отримаємо абсолютний шлях до поточного файлу та динамічно передайте назву файлу
+    path_to_file = os.path.abspath(__file__ + f"/../../../static/{filename}")
+    # Open the file in read mode
+    # Відкриваємо файл у режимі читання
+    with open(path_to_file, 'r') as file:
+        # Read the content of the file and return it as a dictionary
+        # Читаємо вміст файлу та повертаємо його як словник
+        return json.load(file)
+```
+
+
+[⬆️Table of contents](#articles) 
+
+
+
+
+
+
+
 
 
 
