@@ -1926,7 +1926,7 @@ and deepen my knowledge in programming. I am sure that everything I learned whil
 </details>
 
 
-[![Typing SVG](https://github.com/Pranichek?color=%2336BCF7&lines=Music+player)](https://github.com/Pranichek)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Music+player)](https://github.com/Pranichek)
 
 
 
