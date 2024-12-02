@@ -8,6 +8,10 @@
 8)какие были проблемы при создании проекта , как решил проблему с которой столкнулся
 9)сделать работу над ошибками(потоки , не создавал классы)
 10)висновок на укр и на англ(с чем помог проект, как он меня прокачал , чем он был мне полезен)
+<h1>Music Player</h1>
+
+---
+
 <a name="articles"><h3>Table of contents</h3></a>
 
 # Project Description  
@@ -65,10 +69,10 @@
 # Conclusion
 [Conlusion](#conclusions)
 
+---
 
 
-
-<a name="headers"><h1>Music PLayer</h1></a>
+<a name="headers"><h1>Project description</h1></a>
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
