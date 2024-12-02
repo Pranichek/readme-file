@@ -1928,6 +1928,8 @@ and deepen my knowledge in programming. I am sure that everything I learned whil
 знання в програмуванні. Я впевнений, що все чого я навчився під час його створення, стане основою для моїх майбутніх проєктів.
 </details>
 
+[⬆️Table of contents](#articles)
+
 ## Contact Me
 
 📧 Email: [vovagrinchenko19@gmail.com](mailto:vovagrinchenko19@gmail.com)  
