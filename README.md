@@ -63,7 +63,7 @@
 [Mistakes during development](#work_mistakes)
 
 # Conclusion
-[Conlusion](#conclusion)
+[Conlusion](#conclusions)
 
 
 
@@ -1877,7 +1877,7 @@ Despite these mistakes, I am very glad that they happened at a stage when I was 
 
 
 
-<a name = "conclusion"><h1>Conclusion</h1></a>
+<a name = "conclusions"><h1>Conclusion</h1></a>
 This project was a big step forward in my development as a developer and allowed me to significantly improve my skills.
 Firstly, I began to read the documentation for the libraries and tools I used more carefully. In particular, when I was
 looking for a solution to a problem with music playback or asynchrony, I spent a lot of time reading
