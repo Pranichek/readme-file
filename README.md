@@ -69,7 +69,6 @@
 
 
 <a name="headers"><h1>Music PLayer</h1></a>
-<p style="text-align: center;">Центрированный элемент</p>
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
@@ -1924,6 +1923,11 @@ and deepen my knowledge in programming. I am sure that everything I learned whil
 Взагалі я вважаю що цей проєкт став для мене чудовим досвідом, що дозволив значно розвинути мої навички та поглибити 
 знання в програмуванні. Я впевнений, що все чого я навчився під час його створення, стане основою для моїх майбутніх проєктів.
 </details>
+
+## Contact Me
+
+📧 Email: [vovagrinchenko19@gmail.com](mailto:vovagrinchenko19@gmail.com)  
+🖥️ GitHub: [Volodymyr Hrinchenchenko](https://github.com/Pranichek)  
 
 
 
