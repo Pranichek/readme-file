@@ -62,11 +62,13 @@
 # Working on mistakes
 [Mistakes during development](#work_mistakes)
 
+# Conclusion
+[Conlusion](#conclusion)
 
 
 
 
-<a name="headers"><h1>Music PLayer</h1></a>
+<a name="headers"><h1 align = "cenret">Music PLayer</h1></a>
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
@@ -1874,8 +1876,60 @@ Despite these mistakes, I am very glad that they happened at a stage when I was 
 
 
 
+<a name = "conclusion"><h1>Conclusion</h1></a>
+This project was a big step forward in my development as a developer and allowed me to significantly improve my skills.
+Firstly, I began to read the documentation for the libraries and tools I used more carefully. In particular, when I was
+looking for a solution to a problem with music playback or asynchrony, I spent a lot of time reading
+the official documentation. This helped me find accurate and effective solutions for my tasks.
 
-ʼ
+During development, I also understood the importance of proper code organization. At first, the project was organized
+not very efficiently, but over time I learned to divide the code into modules, create separate functions for different tasks
+and organize the file structure correctly. This greatly simplified the maintenance and scaling of the project.
+
+I also learned to work with clean code, where every comment and every line of code is important. Since I learned from my
+mistakes, with each new step I tried to make the code easy to understand, organized, and maintainable.
+Such approaches allow to minimize errors and improve the quality of the program. I also encountered various problems, and thanks to them 
+I gained valuable lessons that helped me avoid these errors in the future. For example, 
+I understood the importance of thoughtful planning and the right choice of approaches to code structure. Now I know how to avoid the shortcomings that arose during this project.
+
+One of the important moments was creating documentation for the project. This allowed me to understand how important it is to provide a
+clear and understandable explanation of how the program works, what libraries are used and how to configure it. I learned
+to structure the README file correctly so that users could quickly understand the basic principles of the project.
+
+Overall, I think that this project was a great experience for me, which allowed me to significantly develop my skills 
+and deepen my knowledge in programming. I am sure that everything I learned while creating it will become the basis for my future projects.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Цей проєкт став великим кроком вперед у моєму розвитку як розробника і дозволив значно покращити мої навички. 
+По перше, я став більш уважно читати документацію до використовуваних бібліотек і інструментів. Зокрема, коли я 
+шукав рішення для проблеми з програванням музики або асинхронністю, я витратив багато часу на читання 
+офіційної документації. Це допомогло мені знайти точні і ефективні рішення для моїх завдань.
+
+Під час розробки я також зрозумів важливість правильної організації коду. Спочатку проєкт був організований 
+не зовсім ефективно, але з часом я навчився розділяти код на модулі, створювати окремі функції для різних задач 
+і правильно організовувати структуру файлів. Це значно спростило підтримку і масштабування проєкту.
+
+Я також навчився працювати з чистим кодом, де важливі кожен коментар і кожен рядок коду. Оскільки я вчився на своїх 
+помилках, то з кожним новим кроком я намагався зробити код простим для розуміння, організованим і підтримуваним. 
+Такі підходи дозволяють мінімізувати помилки і покращити якість програми.Також я стикався з різними проблемами, 
+і завдяки їм я отримав цінні уроки, які допомогли мені уникати цих помилок у майбутньому. Наприклад, я зрозумів 
+важливість продуманого планування та правильного вибору підходів до структури коду. Тепер я знаю, як уникати недоліків, які виникли під час цього проєкту.
+
+Одним із важливих моментів було створення документації для проєкту. Це дозволило мені зрозуміти, як важливо надавати 
+чітке та зрозуміле пояснення того, як працює програма, які бібліотеки використовуються та як її налаштовувати. Я навчився 
+правильно структурувати README файл, щоб користувачі могли швидко зрозуміти основні принципи роботи проєкту.
+
+Взагалі я вважаю що цей проєкт став для мене чудовим досвідом, що дозволив значно розвинути мої навички та поглибити 
+знання в програмуванні. Я впевнений, що все чого я навчився під час його створення, стане основою для моїх майбутніх проєктів.
+</details>
+
+
+
+
+
+
+
 
  
 
