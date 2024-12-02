@@ -56,13 +56,17 @@
 # Sources of information
 [Links to sources of information](#links_of_informations)
 
+# Problems when creating a project
+[Problems during development](#prbl_project)
+
+# Working on mistakes
+[Mistakes during development](#work_mistakes)
 
 
 
 
 
 <a name="headers"><h1>Music PLayer</h1></a>
-
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
@@ -1749,7 +1753,7 @@ In the process of development there are a lot of collapsible parts that were los
 
 1. [Stack Overflow](https://stackoverflow.com) - to look for clues about the recent treats that were written in me / Для пошуку відповідей на дивні помилки які в мене виникали
 2. [Документація Pygame](https://www.pygame.org/docs) - to learn the pygame.mixer module / для вивчення модуля pygame.mixer
-3. [Документація CustomTkinter](https://customtkinter.tomschimansky.com/documentation) - to learn mpre about the module customtkinter / для вивченн більшої інформації о бібліотеці customtkinter
+3. [Документація CustomTkinter](https://customtkinter.tomschimansky.com/documentation) - to learn more about the module customtkinter / для вивченн більшої інформації о бібліотеці customtkinter
 4. [Офіційна документація Python](https://docs.python.org/) - to learn the threading module / для вивчення threading бібліотеки
 5. [YouTube](https://youtube.com) - to view educational videos and examples of implementing similar projects / для перегляду навчальних відео та прикладів реалізації подібних проєктів
 
@@ -1758,7 +1762,120 @@ In the process of development there are a lot of collapsible parts that were los
 
 
 
+<a name = "prbl_project"><h1>Problems when creating a project</h1></a>
 
+During the development of this project, I encountered several 
+important problems, each of which required a separate approach to solving and additional study of the materials.
+
+The first problem concerned the order of playing tracks. When the user added tracks to the playlist, 
+the music would start playing, but immediately skip to the last track, ignoring the order. This violated the basic 
+functionality of the player. To solve this problem, I delved into the documentation of the pygame.mixer module, 
+trying to find a function that would allow me to control the order of playback. After a long search, 
+I came across an article on Stack Overflow, where it was suggested to use an infinite loop to check the 
+completion of the current track before switching to the next one. This solution turned out to be effective, now the player began to play tracks correctly in the given order.
+
+However, after solving the first problem, a second one arose, which was a side effect of using infinite loops. 
+The project already had a main program loop - main_loop, and adding a second loop to control the order of track 
+playback caused a serious load. As a result, the player began to lag a lot, and the interface simply froze. 
+Here I was helped by my mentor, who explained that such a problem occurs due to blocking of the main program thread. 
+He advised me to use threads for asynchronous work. After studying the documentation of the threading module, 
+I implemented an asynchronous approach, separating the execution of the main program loop and processing the order of tracks. 
+This significantly improved performance and eliminated lag.
+
+The third problem concerned the implementation of the functionality for removing tracks from the playlist. 
+To remove, it was necessary to correctly define each button separately. Initially, I decided to pass the track 
+name as a parameter to the function bound to the button. But during development, it turned out that all buttons 
+received only the last track name from the playlist. Additionally, customtkinter did not allow directly passing 
+parameters to functions bound to buttons. Again, I found a solution on Stack Overflow - using a lambda function 
+allowed me to create anonymous functions through which I could pass the desired parameter to the delete function. 
+This solution allowed me to correctly identify the track and determine which button was pressed.
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Під час розробки цього проєкту я зіштовхнувся з кількома важливими проблемами, кожна з яких вимагала окремого 
+підходу до вирішення та додаткового вивчення матеріалів.
+
+Перша проблема стосувалася порядку відтворення треків. Коли користувач додавав треки у плейлист, 
+музика починала відтворюватися, але одразу перескакувала на останній трек, ігноруючи черговість. 
+Це порушувало основний функціонал програвача. Щоб розв’язати цю проблему, я заглибився у документацію 
+модуля pygame.mixer, намагаючись знайти функцію, яка дозволила б контролювати черговість відтворення. 
+Після тривалих пошуків я натрапив на статтю на Stack Overflow, де було запропоновано використання 
+нескінченного циклу для перевірки завершення поточного треку перед перемиканням на наступний. 
+Це рішення виявилося дієвим , тепер програвач почав правильно відтворювати треки у заданому порядку.
+
+Однак, після вирішення першої проблеми виникла друга, яка була побічним ефектом застосування нескінченних циклів. 
+У проєкті вже існував головний цикл програми - main_loop, і додавання другого циклу для контролю черговості відтворення 
+треків спричинило серйозне навантаження. У результаті програвач почав сильно лагати, а інтерфейс просто зависав. 
+Тут мені допоміг мій ментор, який пояснив, що така проблема виникає через блокування основного потоку програми. 
+Він порадив використовувати потоки для асинхронної роботи. Після вивчення документації модуля threading я реалізував 
+асинхронний підхід, розділивши виконання основного циклу програми та обробки черговості треків. Це значно покращило продуктивність і усунуло лаги.
+
+Третя проблема стосувалася реалізації функціоналу видалення треків із плейлиста. Для видалення було необхідно 
+коректно визначати кожну кнопку окремо. Спочатку я вирішив передавати назву треку як параметр у функцію, прив’язану 
+до кнопки. Але під час розробки виявилося, що всі кнопки отримували лише останню назву треку з плейлиста. Додатково 
+customtkinter не дозволяв напряму передавати параметри у функції, прив’язані до кнопок. Знову ж таки, вирішення я 
+знайшов на Stack Overflow - використання lambda-функції дозволило створювати анонімні функції, через які можна було 
+передавати потрібний параметр до функції видалення. Це рішення дозволило коректно ідентифікувати трек,  та ивзначати на яку кнопку натиснули.
+</details>
+
+[⬆️Table of contents](#articles) 
+
+<a name = "work_mistakes"><h1>Working on mistakes</h1></a>
+
+During the development of this project, I made several important mistakes that affected the 
+creation process and the high-quality implementation of the functionality.
+
+One of the biggest mistakes in the project structure was ignoring the object-oriented approach. 
+I focused only on using functions, without using classes, which greatly simplify the scaling and maintenance of the code. 
+Already at the middle stage of work, I understood the advantages of using classes, but at that time, reworking the project 
+would have required excessive effort. Therefore, I decided to complete the implementation in its original form, taking into account this lesson for future projects.
+
+Another mistake was that I did not pay enough attention to planning before starting development. I created a general 
+work plan, but did not take into account possible difficulties and how to better organize the code. For example, 
+I did not think in advance about using classes and threads for asynchronous work. This led to problems that had to 
+be solved already during the development process, spending additional time on this.
+
+The last very significant mistake was related to the use of global variables. In the first version of the project, 
+I actively used global variables to implement the logic of the program. This led to the fact that the code became 
+less understandable and more difficult to maintain. After I showed the project for review, this problem was pointed 
+out to me, and I reworked the code, getting rid of global variables. Although it took time, 
+I learned an important lesson, and now I will avoid using global variables in future projects.
+
+Despite these mistakes, I am very glad that they happened at a stage when I was just learning how to develop programs correctly.
+
+
+<details>
+<summary>🇺🇦 Ukrainian version 🇺🇦</summary>
+Під час розробки цього проєкту я припустився кількох важливих помилок, які вплинули на процес створення 
+і якісну реалізацію функціоналу.
+
+
+Однією з найбільших помилок у структурі проєкту було ігнорування об'єктно-орієнтованого підходу. 
+Я зосередився лише на використанні функцій, не застосовуючи класи, які значно спрощують масштабування 
+та підтримку коду. Вже на середньому етапі роботи я зрозумів переваги використання класів, але на той 
+момент переробка проєкту вимагала б надмірних зусиль. Тому я вирішив завершити реалізацію в початковому 
+вигляді, врахувавши цей урок для майбутніх проєктів.
+
+Іншою помилкою було те, що я не приділив достатньої уваги плануванню перед початком розробки. 
+Я створив загальний план роботи, але не врахував можливих складнощів і того, як краще організувати код. 
+Наприклад, я не продумав заздалегідь використання класів і потоків для асинхронної роботи. Це призвело 
+до появи проблем, які довелося вирішувати вже в процесі розробки, витрачаючи на це додатковий час.
+
+Остання дуже значна помилка стосувалася використання глобальних змінних. У першій версії проєкту я 
+активно використовував глобальні змінні для реалізації логіки програми. Це призвело до того, що код 
+став менш зрозумілим і важчим у підтримці. Після того, як я показав проєкт на перевірку, мені вказали 
+на цю проблему, і я переробив код, позбувшись глобальних змінних. Хоча це й забрало час, я засвоїв 
+важливий урок , і тепер буду уникати використання глобальних змінних у майбутніх проєктах.
+
+Не дивлячись  на ці помилки , я дуже радий що вони трапились на тому етапі ,коли я лишк вчусь правильно розробляти програми.
+</details>
+
+[⬆️Table of contents](#articles) 
+
+
+
+
+ʼ
 
  
 
