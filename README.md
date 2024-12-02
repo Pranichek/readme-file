@@ -68,7 +68,8 @@
 
 
 
-<a name="headers"><h1 style = "text-indent:100px">Music PLayer</h1></a>
+<a name="headers"><h1>Music PLayer</h1></a>
+
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
@@ -1924,6 +1925,8 @@ and deepen my knowledge in programming. I am sure that everything I learned whil
 знання в програмуванні. Я впевнений, що все чого я навчився під час його створення, стане основою для моїх майбутніх проєктів.
 </details>
 
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Music+player)](https://git.io/typing-svg)
 
 
 
