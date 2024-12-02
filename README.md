@@ -68,7 +68,7 @@
 
 
 
-<a name="headers"><h1 align = "cenret">Music PLayer</h1></a>
+<a name="headers"><h1 style = "text-indent:100px">Music PLayer</h1></a>
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
