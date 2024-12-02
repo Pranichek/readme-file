@@ -68,9 +68,9 @@
 
 
 
-<a name="headers">
-    <h1 style="text-align: center;">Music Player</h1>
-</a>
+<a name="headers"><h1>Music PLayer</h1></a>
+<p style="text-align: center;">Центрированный элемент</p>
+
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
 experience in creating functional applications with an attractive graphical interface in Python.
 Of course, this program is not perfect, but this project served as a learning tool to deepen my understanding 
