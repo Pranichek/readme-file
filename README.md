@@ -69,7 +69,7 @@
 
 
 <a name="headers"><h1>Music PLayer</h1></a>
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Music+player&size=1000)](https://github.com/Pranichek)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Music+player&size=100)](https://github.com/Pranichek)
 
 
 The main goal of developing this program was to improve my skills in working with the customtkinter library and gain 
